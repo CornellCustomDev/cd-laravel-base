@@ -1,4 +1,14 @@
-@import 'tailwindcss';
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+/* Preflight is excluded to avoid conflicts with CDS */
+/* @see https://tailwindcss.com/docs/preflight#disabling-preflight */
+/* @import "tailwindcss/preflight.css" layer(base); */
+@import "tailwindcss/utilities.css" layer(utilities);
+
+/* Classes excluded to avoid conflicts with CDS */
+@source not inline("flex-{1,2,3,4,5,6,7,8,9,10,11,12}");
+@source not inline("container");
 
 @source '../views';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
