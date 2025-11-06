@@ -1,0 +1,7 @@
+name: cd-laravel-base
+recipe: laravel
+config:
+  webroot: ./public
+  php: 8.2
+  cache: none
+  composer_version: 2-latest
