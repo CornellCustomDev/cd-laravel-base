@@ -5,5 +5,19 @@
         <ul>
             <li><a href="/">Template</a></li>
         </ul>
+        <ul>
+            <li>
+                <a role="combobox" aria-expanded="false" data-aria-controls="dropdown-examples" aria-controls="dropdown-examples" tabindex="0">Examples</a>
+                <ul id="dropdown-examples" role="listbox">
+                    <li>
+                        <a href="{{ route('examples/cds') }}">Cornell Design System</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('examples/form') }}">Form</a>
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
     </div>
 </nav>
