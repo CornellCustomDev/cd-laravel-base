@@ -25,6 +25,9 @@ jobs:
         with:
           php-version: '8.4'
 
+      - name: Add GitHub Token for accessing CDS repository
+        run: composer config --global github-oauth.github.com "${{ secrets.GH_TOKEN }}"
+
 #      - name: Add Flux Credentials Loaded From ENV
 #        run: composer config http-basic.composer.fluxui.dev "${{ secrets.FLUX_USERNAME }}" "${{ secrets.FLUX_LICENSE_KEY }}"
 
