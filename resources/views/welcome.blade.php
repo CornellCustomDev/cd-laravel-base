@@ -8,7 +8,7 @@
     <aside>
         <div class="container">
             <div class="text-right full-margin">
-                <button class="button red bear" onclick="$(this).unbind('click');$('body').toggleClass('dark fill')">
+                <button class="button red bear" x-data x-on:click="$flux.dark = ! $flux.dark">
                     Toggle Dark
                 </button>
             </div>

@@ -28,8 +28,9 @@
     <link rel="stylesheet" href="{{ asset('cds/fonts/cornell-custom.css') }}">
 
     @livewireStyles
+    @fluxAppearance
 </head>
-<body>
+<body class="fill" x-data x-effect="document.body.classList.toggle('dark', $flux.dark)">
 
 <x-cds.layout.header :title="$title" :subtitle="$subtitle"/>
 
@@ -47,5 +48,6 @@
 <script src="{{ asset('cds/js/cds_menus.js') }}"></script>
 
 @livewireScripts
+@fluxScripts
 </body>
 </html>

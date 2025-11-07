@@ -12,6 +12,10 @@
         "cds": {
             "type": "vcs",
             "url": "https://github.com/CornellCustomDev/cds"
+        },
+        "flux-pro": {
+            "type": "composer",
+            "url": "https://composer.fluxui.dev"
         }
     },
     "require": {
@@ -19,6 +23,7 @@
         "cornell-custom-dev/cds": "^1.2.0@beta",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
+        "livewire/flux-pro": "^2.6",
         "livewire/volt": "^1.7.0"
     },
     "require-dev": {
