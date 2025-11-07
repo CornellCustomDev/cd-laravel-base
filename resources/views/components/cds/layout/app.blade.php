@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="{{ asset('cds/fonts/cornell-custom.css') }}">
 
     @livewireStyles
+
+    <!-- @see https://fluxui.dev/docs/dark-mode#disabling-dark-mode-handling -->
     @fluxAppearance
 </head>
 <body class="fill" x-data x-effect="document.body.classList.toggle('dark', $flux.dark)">
