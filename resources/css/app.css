@@ -20,3 +20,35 @@
 @theme {
     --font-sans: 'freight-sans-pro', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+/* Form fields */
+[data-flux-field] {
+    @apply max-w-[600px];
+
+    form.no-constrain & {
+        @apply max-w-full!;
+    }
+
+    [data-flux-label] {
+        @apply text-base font-medium mb-1;
+    }
+
+    [data-flux-input] input {
+        @apply h-8 px-2 py-1.5 mb-5;
+        @apply rounded-none border-[#808080] dark:border-white/[0.4];
+        @apply inset-shadow-[0_1px_0_0_rgba(0,0,0,0.1)];
+        @apply text-base text-black dark:text-white;
+    }
+
+    [data-flux-error] {
+        @apply -mt-4! mb-5;
+        [data-flux-icon] {
+            @apply align-text-bottom translate-y-0.5;
+        }
+    }
+
+    [data-flux-description] {
+        @apply mb-5;
+        @apply text-base text-[#707070] dark:text-[#a1a1a1];
+    }
+}
