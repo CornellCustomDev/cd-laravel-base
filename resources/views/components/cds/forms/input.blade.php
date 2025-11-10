@@ -24,7 +24,7 @@ $badge ??= $attributes->whereStartsWith('required')->isNotEmpty() ? 'Required' :
     <flux:error :$name :message="$errorMessage" />
 
     @if ($descriptionTrailing)
-        <flux:description class="-mt-4!">{!! $descriptionTrailing !!}</flux:description>
+        <flux:description class="-mt-4! mb-5!">{!! $descriptionTrailing !!}</flux:description>
     @endif
 
 </flux:field>

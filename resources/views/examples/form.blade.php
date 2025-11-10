@@ -43,26 +43,6 @@
                                     placeholder="use 'aria-describedby' on the input to reference the description ID"
                                     description-trailing="This description text provides additional instruction or formatting hints."
                                 />
-
-                                <flux:separator class="my-8" />
-
-                                <x-cds.forms.input
-                                    label="Text Input with Description Before" name="fieldreq"
-                                    description="This description text provides additional instruction or formatting hints."
-                                />
-                                <x-cds.forms.input
-                                    label="Required Input" name="field-req"
-                                    badge="Required"
-                                />
-                                <x-cds.forms.input
-                                    label="Input with Error" name="field-error"
-                                    errorMessage="This field has an error."
-                                />
-                                <x-cds.forms.input
-                                    label="Input with Error and Description" name="field-error-desc"
-                                    description-trailing="A field that shows an error message."
-                                    errorMessage="This field has an error."
-                                />
                             </x-cds.forms.fieldset>
                         </form>
                     </div>
@@ -83,11 +63,31 @@
                         </form>
                     </div>
                 </div>
+                <flux:separator class="mb-4" />
                 <div class="section">
-                    <h2>Unconstrained Width</h2>
+                    <h2>Extended Examples</h2>
+                    <form class="mb-0!">
+                        <x-cds.forms.input
+                            label="Text Input with Description Before" name="field-desc-before"
+                            description="This description text provides additional instruction or formatting hints."
+                        />
+                        <x-cds.forms.input
+                            label="Required Input" name="field-req"
+                            badge="Required"
+                        />
+                        <x-cds.forms.input
+                            label="Input with Error" name="field-error"
+                            errorMessage="This field has an error."
+                        />
+                        <x-cds.forms.input
+                            label="Input with Error and Description" name="field-error-desc"
+                            description-trailing="A field that shows an error message."
+                            errorMessage="This field has an error."
+                        />
+                    </form>
                     <form class="no-constrain">
                         <x-cds.forms.input
-                            label="Text Input" name="field1" size="32"
+                            label="Unconstrained Text Input" name="field-unconstrained" size="32"
                             placeholder="Unconstrained"
                         >
                             <x-slot:descriptionTrailing>
