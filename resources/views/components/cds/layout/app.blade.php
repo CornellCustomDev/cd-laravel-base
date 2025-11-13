@@ -17,11 +17,6 @@
     <!-- Cornell.edu Typography -->
     <link rel="stylesheet" href="https://use.typekit.net/nwp2wku.css">
 
-    <!-- Decorative -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap">
-
     <!-- Icon Fonts -->
     <link rel="stylesheet" href="{{ asset('cds/fonts/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('cds/fonts/material-design-iconic-font.min.css') }}">
