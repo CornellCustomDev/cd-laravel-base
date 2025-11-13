@@ -13,7 +13,7 @@
                         <a href="{{ route('examples/cds') }}">Cornell Design System</a>
                     </li>
                     <li>
-                        <a href="{{ route('examples/form') }}">Form</a>
+                        <a href="{{ route('examples/form') }}">Form Inputs</a>
                     </li>
                 </ul>
 
