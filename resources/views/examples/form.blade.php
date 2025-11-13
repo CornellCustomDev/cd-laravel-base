@@ -54,8 +54,10 @@
 
                                 <label for="field1">Text Input</label>
                                 <input type="text" id="field1" name="field1" size="32" placeholder="default (full-width)">
+
                                 <label for="field1b">Text Input (with <code>.native-size</code> class)</label>
                                 <input type="text" class="native-size" id="field1b" name="field1b" size="32" placeholder="honors the 'size' attribute">
+
                                 <label for="field1c">Text Input with Description</label>
                                 <input type="text" id="field1c" name="field1c" size="32" placeholder="use 'aria-describedby' on the input to reference the description ID" aria-describedby="field1c_desc">
                                 <div class="description" id="field1c_desc">This description text provides additional instruction or formatting hints.</div>
@@ -73,16 +75,16 @@
                         />
                         <x-cds.forms.input
                             label="Required Input" name="field-req"
-                            badge="Required"
+                            required
                         />
                         <x-cds.forms.input
                             label="Input with Error" name="field-error"
-                            errorMessage="This field has an error."
+                            error:message="This field has an error."
                         />
                         <x-cds.forms.input
                             label="Input with Error and Description" name="field-error-desc"
                             description-trailing="A field that shows an error message."
-                            errorMessage="This field has an error."
+                            error:message="This field has an error."
                         />
                     </form>
                     <form class="no-constrain">
