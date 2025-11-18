@@ -2,7 +2,7 @@
 
 use CornellCustomDev\LaravelStarterKit\CUAuth\Middleware\CUAuth;
 
-Route::group(['middleware' => [CUAuth::class]], function() {
+Route::group(['middleware' => [CUAuth::class]], function () {
     Route::get('/examples/cds', function () {
         return view('examples/cds');
     })->name('examples/cds');
