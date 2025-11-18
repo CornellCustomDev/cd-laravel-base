@@ -24,10 +24,8 @@
                         <h3>Flux Components</h3>
 
                         <form>
-                            <x-cds.forms.fieldset class="semantic">
-                                <x-slot:legend class="sr-only">
-                                    This legend is read by screen readers, but should not be visible.
-                                </x-slot:legend>
+                            <fieldset class="semantic">
+                                <legend class="sr-only">This legend is read by screen readers, but should not be visible.</legend>
 
                                 <x-cds.forms.input
                                     label="Text Input" name="field1" size="32"
@@ -43,7 +41,7 @@
                                     placeholder="use 'aria-describedby' on the input to reference the description ID"
                                     description-trailing="This description text provides additional instruction or formatting hints."
                                 />
-                            </x-cds.forms.fieldset>
+                            </fieldset>
                         </form>
                     </div>
                     <div class="section">
