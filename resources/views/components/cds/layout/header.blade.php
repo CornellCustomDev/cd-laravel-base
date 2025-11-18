@@ -35,7 +35,7 @@
                         </li>
                     @else
                         <li class="top-level-li">
-                            <a href="{{ route('cu-auth.sso-login') }}">Log In</a>
+                            <a href="{{ route('login') }}">Log In</a>
                         </li>
                     @endif
                 </ul>
