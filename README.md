@@ -30,12 +30,12 @@ Components are used in blade files with the `<x-cds` syntax. For example, to use
 />
 ```
 
-You can also pass additional attributes to the component and they will be applied to the contained input element. Named slots can also be used to fill attributes. For example:
+You can also pass additional attributes to the component and they will be applied to the contained input element ("required" in this case). Named slots can also be used to fill attributes. For example:
 
 ```blade
-<x-cds.forms.input name="email" label="Email" type="email" required>
+<x-cds.forms.input name="name" label="Name" required>
     <x-slot:description>
-        Please enter your email address.
+        Please enter your full name.
     </x-slot:description>
 </x-cds.forms.input>
 ```
