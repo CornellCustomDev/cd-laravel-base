@@ -4,6 +4,8 @@
 
 Run `composer setup` after cloning to set up your environment.
 
+FluxPro components will not be accessible until you provide Flux repo credentials in auth.json.
+
 _Note: If you run composer setup inside the lando container you will need to provide a GitHub Token to access the private https://github.com/CornellCustomDev/cds repository._
 
 ## Layout
@@ -17,7 +19,6 @@ Edit the layout starting at [resources/views/components/cds/layout/app.blade.php
 Components are built with [FluxPro](https://fluxui.dev/docs). Examples of components are at [resources/views/examples/form.blade.php](resources/views/examples/form.blade.php)
 
 Available components:
-- [Fieldset](resources/views/components/cds/forms/fieldset.blade.php)
 - [Text input](resources/views/components/cds/forms/input.blade.php)
 
 ### Using components
