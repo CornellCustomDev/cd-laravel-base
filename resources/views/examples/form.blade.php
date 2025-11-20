@@ -84,6 +84,7 @@
                             description-trailing="A field that shows an error message."
                             error:message="This field has an error."
                         />
+
                     </form>
                     <form class="no-constrain">
                         <x-cds.forms.input
@@ -94,6 +95,8 @@
                                 By default, form fields and their associate labels and descriptions will fill all available width. form.no-constrain option lifts this limit limits these elements to 600px maximum width, which may be desirable in some cases where fields being wider than this will begin to lose their "field" appearance to the visitor's eyes.
                             </x-slot:descriptionTrailing>
                         </x-cds.forms.input>
+                        <x-cds.forms.button type="submit">Submit</x-cds.forms.button>
+                        <x-cds.forms.button type="reset">Reset</x-cds.forms.button>
                     </form>
                 </div>
             </div>
