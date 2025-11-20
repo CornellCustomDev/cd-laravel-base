@@ -52,3 +52,28 @@
         @apply text-base text-[#707070] dark:text-[#a1a1a1];
     }
 }
+/* Buttons */
+[data-flux-button] {
+    @apply rounded-none shadow-none;
+    @apply text-base font-normal;
+    @apply pt-[0.28em] px-[1.25em] pb-[0.32em];
+    @apply mr-[0.1em] mb-[0.4em];
+
+    &[type="submit"] {
+        @apply text-white;
+        background: #006699;
+        &:hover,
+        &:focus {
+            background: #0077b3;
+        }
+    }
+
+    &[type="reset"] {
+        @apply text-black;
+        background: #dbdbdb;
+        &:hover,
+        &:focus {
+            background: #d1d1d1;
+        }
+    }
+}
