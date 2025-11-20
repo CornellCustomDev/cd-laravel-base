@@ -2,11 +2,9 @@
     'type' => 'button',
 ])
 
-<button
+<flux:button
     type="{{ $type }}"
-    {{ $attributes->merge([
-        'class' => ''
-    ]) }}
+    {{ $attributes }}
 >
     {{ $slot }}
-</button>
+</flux:button>

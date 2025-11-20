@@ -6,7 +6,7 @@
 /* @import "tailwindcss/preflight.css" layer(base); */
 @import "tailwindcss/utilities.css" layer(utilities);
 
-@import '../../vendor/livewire/flux/dist/flux.css';
+@import "../../vendor/livewire/flux/dist/flux.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -18,7 +18,9 @@
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 
 @theme {
-    --font-sans: 'freight-sans-pro', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: "freight-sans-pro", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
 }
 
 /* Form fields */
@@ -50,5 +52,31 @@
     [data-flux-description] {
         @apply mb-5;
         @apply text-base text-[#707070] dark:text-[#a1a1a1];
+    }
+}
+
+/* Buttons */
+[data-flux-button] {
+    @apply rounded-none shadow-none;
+    @apply text-base font-normal;
+    @apply pt-[0.28em] px-[1.25em] pb-[0.32em];
+    @apply mr-[0.1em] mb-[0.4em];
+
+    &[type="submit"] {
+        @apply text-white;
+        background: #006699;
+        &:hover,
+        &:focus {
+            background: #0077b3;
+        }
+    }
+
+    &[type="reset"] {
+        @apply text-black;
+        background: #dbdbdb;
+        &:hover,
+        &:focus {
+            background: #d1d1d1;
+        }
     }
 }
