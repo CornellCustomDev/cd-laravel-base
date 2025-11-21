@@ -29,13 +29,17 @@
 </head>
 <body class="fill" x-data x-effect="document.body.classList.toggle('dark', $flux.dark)">
 
+<<<<<<< HEAD:resources/views/components/layout/app.blade.php
 <x-layout.header :title="$title ?? (config('app.name'))" :subtitle="$subtitle ?? (config('app.subtitle'))"/>
+=======
+<x-layouts.header :title="$title" :subtitle="$subtitle"/>
+>>>>>>> main:resources/views/components/layouts/app.blade.php
 
 <main id="main" class="band" tabindex="-1">
 {{ $slot }}
 </main>
 
-<x-layout.footer/>
+<x-layouts.footer/>
 
 <!-- jQuery and Contributed Components -->
 <script src="{{ asset('cds/js/contrib/jquery-3.7.1.min.js') }}"></script>
