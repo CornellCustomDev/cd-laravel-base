@@ -23,7 +23,7 @@
                     <div class="section">
                         <h3>Flux Components</h3>
 
-                        <table class="cds-table cds-table-striped cds-table-hover cds-table-bordered">
+                        {{-- <table class="cds-table cds-table-striped cds-table-hover cds-table-bordered">
                             <thead>
                                 <tr>
                                     <th>User</th>
@@ -40,31 +40,31 @@
                                 </tr>
                                 @endforeach
                             </tbody>
-                        </table>
+                        </table> --}}
                     </div>
 
                 <flux:separator class="mb-4" />
 
-{{-- <flux:table>
-    <flux:table.columns>
-        <flux:table.column>Customer</flux:table.column>
-        <flux:table.column sortable :sorted="$sortBy === 'name'" :direction="$sortDirection" wire:click="sort('name')">Name</flux:table.column>
-        <flux:table.column sortable :sorted="$sortBy === 'email'" :direction="$sortDirection" wire:click="sort('email')">Email</flux:table.column>
-        <flux:table.column sortable :sorted="$sortBy === 'created_at'" :direction="$sortDirection" wire:click="sort('created_at')">Created At</flux:table.column>
-    </flux:table.columns>
-    <flux:table.rows>
-        @foreach($users as $user)
-            <flux:table.row :key="$user->id">
-                <flux:table.cell class="flex items-center gap-3">{{ $user->name }}</flux:table.cell>
-                <flux:table.cell class="whitespace-nowrap">{{ $user->email }}</flux:table.cell>
-                <flux:table.cell variant="strong">{{ $user->created_at }}</flux:table.cell>
-                <flux:table.cell>
-                    <flux:button variant="ghost" size="sm" icon="ellipsis-horizontal" inset="top bottom"></flux:button>
-                </flux:table.cell>
-            </flux:table.row>
-        @endforeach
-    </flux:table.rows>
-</flux:table> --}}
+                <flux:table>
+                    <flux:table.columns>
+                        <flux:table.column>Customer</flux:table.column>
+                        <flux:table.column sortable :sorted="$sortBy === 'name'" :direction="$sortDirection" wire:click="sort('name')">Name</flux:table.column>
+                        <flux:table.column sortable :sorted="$sortBy === 'email'" :direction="$sortDirection" wire:click="sort('email')">Email</flux:table.column>
+                        <flux:table.column sortable :sorted="$sortBy === 'created_at'" :direction="$sortDirection" wire:click="sort('created_at')">Created At</flux:table.column>
+                    </flux:table.columns>
+                    <flux:table.rows>
+                        @foreach($users as $user)
+                            <flux:table.row :key="$user->id">
+                                <flux:table.cell class="flex items-center gap-3">{{ $user->name }}</flux:table.cell>
+                                <flux:table.cell class="whitespace-nowrap">{{ $user->email }}</flux:table.cell>
+                                <flux:table.cell variant="strong">{{ $user->created_at }}</flux:table.cell>
+                                <flux:table.cell>
+                                    <flux:button variant="ghost" size="sm" icon="ellipsis-horizontal" inset="top bottom"></flux:button>
+                                </flux:table.cell>
+                            </flux:table.row>
+                        @endforeach
+                    </flux:table.rows>
+                </flux:table>
 
 
             </div>
