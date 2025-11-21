@@ -14,10 +14,7 @@ return [
     */
 
     'name' => env('APP_NAME', 'CD Laravel Base'),
-<<<<<<< HEAD
     'subtitle' => env('APP_SUBTITLE', 'Custom Development'),
-=======
->>>>>>> main
 
     /*
     |--------------------------------------------------------------------------

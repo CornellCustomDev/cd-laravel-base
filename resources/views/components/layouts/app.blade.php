@@ -29,11 +29,7 @@
 </head>
 <body class="fill" x-data x-effect="document.body.classList.toggle('dark', $flux.dark)">
 
-<<<<<<< HEAD:resources/views/components/layout/app.blade.php
-<x-layout.header :title="$title ?? (config('app.name'))" :subtitle="$subtitle ?? (config('app.subtitle'))"/>
-=======
-<x-layouts.header :title="$title" :subtitle="$subtitle"/>
->>>>>>> main:resources/views/components/layouts/app.blade.php
+<x-layouts.header :title="$title ?? (config('app.name'))" :subtitle="$subtitle ?? (config('app.subtitle'))"/>
 
 <main id="main" class="band" tabindex="-1">
 {{ $slot }}
