@@ -23,16 +23,19 @@
     <link rel="stylesheet" href="{{ asset('cds/fonts/cornell-custom.css') }}">
 
     @livewireStyles
-</head>
-<body>
 
-<x-cds.layout.header :title="$title" :subtitle="$subtitle"/>
+    <!-- @see https://fluxui.dev/docs/dark-mode#disabling-dark-mode-handling -->
+    @fluxAppearance
+</head>
+<body class="fill" x-data x-effect="document.body.classList.toggle('dark', $flux.dark)">
+
+<x-layout.header :title="$title" :subtitle="$subtitle"/>
 
 <main id="main" class="band" tabindex="-1">
 {{ $slot }}
 </main>
 
-<x-cds.layout.footer/>
+<x-layout.footer/>
 
 <!-- jQuery and Contributed Components -->
 <script src="{{ asset('cds/js/contrib/jquery-3.7.1.min.js') }}"></script>
@@ -42,5 +45,6 @@
 <script src="{{ asset('cds/js/cds_menus.js') }}"></script>
 
 @livewireScripts
+@fluxScripts
 </body>
 </html>
