@@ -47,6 +47,6 @@
             </div>
         </div>
 
-        <x-cds.layout.main-nav/>
+        <x-layout.main-nav/>
     </div>
 </header>

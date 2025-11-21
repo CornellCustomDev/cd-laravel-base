@@ -16,7 +16,6 @@
                         <a href="{{ route('examples/form') }}">Form Inputs</a>
                     </li>
                 </ul>
-
             </li>
         </ul>
     </div>
