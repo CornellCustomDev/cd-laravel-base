@@ -15,6 +15,9 @@
                     <li>
                         <a href="{{ route('examples/form') }}">Form Inputs</a>
                     </li>
+                    <li>
+                        <a href="{{ route('examples/table') }}">Table</a>
+                    </li>
                 </ul>
             </li>
         </ul>

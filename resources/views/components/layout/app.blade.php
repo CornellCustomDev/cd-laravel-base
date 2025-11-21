@@ -29,7 +29,7 @@
 </head>
 <body class="fill" x-data x-effect="document.body.classList.toggle('dark', $flux.dark)">
 
-<x-layout.header :title="$title" :subtitle="$subtitle"/>
+<x-layout.header :title="$title ?? (config('app.name'))" :subtitle="$subtitle ?? (config('app.subtitle'))"/>
 
 <main id="main" class="band" tabindex="-1">
 {{ $slot }}

@@ -1,5 +1,4 @@
 <div>
-<x-cds.layout.app title="CD Laravel Base" subtitle="Custom Development">
     <article id="main-article">
         <div class="region padded">
             <div class="container">
@@ -71,5 +70,4 @@
             </div>
         </div>
     </article>
-</x-cds.layout.app>
 </div>
