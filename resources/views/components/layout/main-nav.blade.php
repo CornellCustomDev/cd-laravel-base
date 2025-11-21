@@ -21,6 +21,9 @@
                             <li>
                                 <a href="{{ route('examples/testing/form') }}">Forms</a>
                             </li>
+                            <li>
+                                <a href="{{ route('examples/testing/errors') }}">Errors</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>

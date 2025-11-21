@@ -44,6 +44,7 @@
 
     [data-flux-error] {
         @apply -mt-4! mb-5;
+        @apply text-[#db2800];
         [data-flux-icon] {
             @apply align-text-bottom translate-y-0.5;
         }
@@ -54,28 +55,33 @@
         @apply text-base text-[#707070] dark:text-[#a1a1a1];
     }
 }
+
 /* Buttons */
 [data-flux-button] {
     @apply rounded-none shadow-none;
     @apply text-base font-normal;
-    @apply pt-[0.28em] px-[1.25em] pb-[0.32em];
-    @apply mr-[0.1em] mb-[0.4em];
+    @apply pt-1 px-5 pb-1;
+    @apply mr-1 mb-2;
 
     &[type="submit"] {
         @apply text-white;
-        background: #006699;
-        &:hover,
-        &:focus {
-            background: #0077b3;
-        }
+        @apply bg-[#006699] hover:bg-[#0077b3] focus:bg-[#0077b3];
     }
 
     &[type="reset"] {
         @apply text-black;
-        background: #dbdbdb;
-        &:hover,
-        &:focus {
-            background: #d1d1d1;
-        }
+        @apply bg-[#dbdbdb] hover:bg-[#d1d1d1] focus:bg-[#d1d1d1];
+    }
+}
+
+/* Error Message Callout */
+[data-flux-callout] {
+    @apply rounded-none;
+    @apply p-3;
+    @apply mb-6;
+    @apply bg-[#FFB3A142] border-[#D9988966];
+    [data-flux-icon] {
+        @apply align-text-bottom translate-y-1.25;
+        @apply text-[#db2800];
     }
 }
