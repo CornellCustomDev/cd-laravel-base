@@ -1,5 +1,5 @@
-<x-layout.app title="CD Laravel Base" subtitle="Custom Development">
-    <x-layout.main-article>
+<x-layouts.app title="CD Laravel Base" subtitle="Custom Development">
+    <x-layouts.main-article>
         <div class="container"></div>
             <h1>Errors</h1>
             <p>This page is used to test error handling in the application.</p>
@@ -12,5 +12,5 @@
                 invalid
             />
         </div>
-    </x-layout.main-article>
-</x-layout.app>
+    </x-layouts.main-article>
+</x-layouts.app>

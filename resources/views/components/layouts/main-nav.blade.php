@@ -13,19 +13,10 @@
                         <a href="{{ route('examples/cds') }}">Cornell Design System</a>
                     </li>
                     <li>
-                        <a href="{{ route('examples/form') }}">Form Inputs</a>
-                        <a role="combobox" aria-expanded="false" data-aria-controls="dropdown-testing" aria-controls="dropdown-testing" tabindex="0">Testing</a>
-                        <ul id="dropdown-testing" role="listbox">
-                            <li>
-                                <a href="{{ route('examples/testing/cds') }}">Cornell Design System</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('examples/testing/form') }}">Forms</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('examples/testing/errors') }}">Errors</a>
-                            </li>
-                        </ul>
+                        <a href="{{ route('examples/form') }}">Forms</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('examples/errors') }}">Errors</a>
                     </li>
                 </ul>
             </li>
