@@ -1,4 +1,4 @@
-<x-layout.app title="CD Laravel Base" subtitle="Custom Development">
+<x-layouts.app title="CD Laravel Base" subtitle="Custom Development">
     <article id="main-article">
 
         <!-- Default main article region with sidebar -->
@@ -3337,4 +3337,4 @@
         </div>
 
     </article>
-</x-layout.app>
+</x-layouts.app>

@@ -47,6 +47,6 @@
             </div>
         </div>
 
-        <x-layout.main-nav/>
+        <x-layouts.main-nav/>
     </div>
 </header>
