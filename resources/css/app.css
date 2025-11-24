@@ -80,7 +80,7 @@
 [data-flux-button] {
     @apply rounded-none shadow-none;
     @apply text-base font-normal;
-    @apply pt-1 px-5 pb-1;
+    @apply px-5 py-1;
     @apply mr-1 mb-2;
 
     &[type="submit"] {
