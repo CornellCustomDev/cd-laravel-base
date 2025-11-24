@@ -78,11 +78,13 @@
                         <x-cds.input
                             label="Input with Error" name="field-error"
                             error:message="This field has an error."
+                            invalid
                         />
                         <x-cds.input
                             label="Input with Error and Description" name="field-error-desc"
                             description-trailing="A field that shows an error message."
                             error:message="This field has an error."
+                            invalid
                         />
                     </form>
                     <form class="no-constrain">

@@ -21,6 +21,23 @@
     --font-sans: "freight-sans-pro", ui-sans-serif, system-ui, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
+
+    /* Colors */
+    --button-primary: #006699;
+    --button-primary-hover: #0077b3;
+    --button-primary-focus: #0077b3;
+    --button-secondary: #dbdbdb;
+    --button-secondary-hover: #d1d1d1;
+    --button-secondary-focus: #d1d1d1;
+    --field-desc: #707070;
+    --field-desc-dark: #a1a1a1;
+    --field-desc-error: #db2800;
+    --field-desc-error-dark: #e95858;
+    --field-border: #808080;
+    --field-bg-error: #ffb3a133;
+    --field-border-error: #ff2f00cc;
+    --callout-bg-error: #ffb3a142;
+    --callout-border-error: #d9988966;
 }
 
 /* Form fields */
@@ -37,14 +54,17 @@
 
     [data-flux-input] input {
         @apply h-8 px-2 py-1.5 mb-5;
-        @apply rounded-none border-[#808080] dark:border-white/[0.4];
+        @apply rounded-none border-[var(--field-border)] dark:border-white/[0.4];
         @apply inset-shadow-[0_1px_0_0_rgba(0,0,0,0.1)];
         @apply text-base text-black dark:text-white;
+        &[aria-invalid="true"] {
+            @apply bg-[var(--field-bg-error)] border-[var(--field-border-error)];
+        }
     }
 
     [data-flux-error] {
         @apply -mt-4! mb-5;
-        @apply text-[#db2800];
+        @apply text-[var(--field-desc-error)] dark:text-[var(--field-desc-error-dark)];
         [data-flux-icon] {
             @apply align-text-bottom translate-y-0.5;
         }
@@ -52,7 +72,7 @@
 
     [data-flux-description] {
         @apply mb-5;
-        @apply text-base text-[#707070] dark:text-[#a1a1a1];
+        @apply text-base text-[var(--field-desc)] dark:text-[var(--field-desc-dark)];
     }
 }
 
@@ -65,12 +85,12 @@
 
     &[type="submit"] {
         @apply text-white;
-        @apply bg-[#006699] hover:bg-[#0077b3] focus:bg-[#0077b3];
+        @apply bg-[var(--button-primary)] hover:bg-[var(--button-primary-hover)] focus:bg-[var(--button-primary-focus)];
     }
 
     &[type="reset"] {
         @apply text-black;
-        @apply bg-[#dbdbdb] hover:bg-[#d1d1d1] focus:bg-[#d1d1d1];
+        @apply bg-[var(--button-secondary)] hover:bg-[var(--button-secondary-hover)] focus:bg-[var(--button-secondary-focus)];
     }
 }
 
@@ -79,9 +99,9 @@
     @apply rounded-none;
     @apply p-3;
     @apply mb-6;
-    @apply bg-[#FFB3A142] border-[#D9988966];
+    @apply bg-[var(--callout-bg-error)] border-[var(--callout-border-error)];
     [data-flux-icon] {
         @apply align-text-bottom translate-y-1.25;
-        @apply text-[#db2800];
+        @apply text-[var(--field-desc-error)] dark:text-[var(--field-desc-error-dark)];
     }
 }
