@@ -29,13 +29,13 @@
 </head>
 <body class="fill" x-data x-effect="document.body.classList.toggle('dark', $flux.dark)">
 
-<x-cds.layout.header :title="$title" :subtitle="$subtitle"/>
+<x-layouts.header :title="$title" :subtitle="$subtitle"/>
 
 <main id="main" class="band" tabindex="-1">
 {{ $slot }}
 </main>
 
-<x-cds.layout.footer/>
+<x-layouts.footer/>
 
 <!-- jQuery and Contributed Components -->
 <script src="{{ asset('cds/js/contrib/jquery-3.7.1.min.js') }}"></script>

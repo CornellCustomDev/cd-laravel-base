@@ -1,4 +1,4 @@
-<x-cds.layout.app title="CD Laravel Base" subtitle="Custom Development">
+<x-layouts.app title="CD Laravel Base" subtitle="Custom Development">
     <article id="main-article">
         <div class="region padded">
             <div class="container">
@@ -27,16 +27,16 @@
                             <fieldset class="semantic">
                                 <legend class="sr-only">This legend is read by screen readers, but should not be visible.</legend>
 
-                                <x-cds.forms.input
+                                <x-cds.input
                                     label="Text Input" name="field1" size="32"
                                     placeholder="default (full-width)"
                                 />
-                                <x-cds.forms.input
+                                <x-cds.input
                                     label="Text Input (with <code>.native-size</code> class)" name="field1b" size="32"
                                     placeholder="honors the 'size' attribute"
                                     class="native-size"
                                 />
-                                <x-cds.forms.input
+                                <x-cds.input
                                     label="Text Input with Description" name="field1c" size="32"
                                     placeholder="use 'aria-describedby' on the input to reference the description ID"
                                     description-trailing="This description text provides additional instruction or formatting hints."
@@ -67,36 +67,36 @@
                 <div class="section">
                     <h2>Extended Examples</h2>
                     <form class="mb-0!">
-                        <x-cds.forms.input
+                        <x-cds.input
                             label="Text Input with Description Before" name="field-desc-before"
                             description="This description text provides additional instruction or formatting hints."
                         />
-                        <x-cds.forms.input
+                        <x-cds.input
                             label="Required Input" name="field-req"
                             required
                         />
-                        <x-cds.forms.input
+                        <x-cds.input
                             label="Input with Error" name="field-error"
                             error:message="This field has an error."
                         />
-                        <x-cds.forms.input
+                        <x-cds.input
                             label="Input with Error and Description" name="field-error-desc"
                             description-trailing="A field that shows an error message."
                             error:message="This field has an error."
                         />
                     </form>
                     <form class="no-constrain">
-                        <x-cds.forms.input
+                        <x-cds.input
                             label="Unconstrained Text Input" name="field-unconstrained" size="32"
                             placeholder="Unconstrained"
                         >
                             <x-slot:descriptionTrailing>
                                 By default, form fields and their associate labels and descriptions will fill all available width. form.no-constrain option lifts this limit limits these elements to 600px maximum width, which may be desirable in some cases where fields being wider than this will begin to lose their "field" appearance to the visitor's eyes.
                             </x-slot:descriptionTrailing>
-                        </x-cds.forms.input>
+                        </x-cds.input>
                     </form>
                 </div>
             </div>
         </div>
     </article>
-</x-cds.layout.app>
+</x-layouts.app>

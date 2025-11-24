@@ -58,6 +58,6 @@
             </div>
         </div>
 
-        <x-cds.layout.main-nav/>
+        <x-layouts.main-nav/>
     </div>
 </header>

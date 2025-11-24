@@ -23,7 +23,7 @@ $badge ??= $attributes->whereStartsWith('required')->isNotEmpty() ? 'Required' :
         >{!! $description !!}</flux:description>
     @endif
 
-    <flux:input :$attributes />
+    <flux:input :$name :$attributes />
 
     <flux:error :attributes="Flux::attributesAfter('error:', $attributes, ['name' => $name])" />
 
