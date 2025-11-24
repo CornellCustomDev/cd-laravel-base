@@ -10,9 +10,10 @@
                 <a role="combobox" aria-expanded="false" data-aria-controls="dropdown-examples" aria-controls="dropdown-examples" tabindex="0">Examples</a>
                 <ul id="dropdown-examples" role="listbox">
                     <li>
-                        <a href="{{ route('examples/form') }}">Form Inputs</a>
+                        <a href="{{ route('examples/cds') }}">Cornell Design System</a>
                     </li>
                     <li>
+                        <a href="{{ route('examples/form') }}">Form Inputs</a>
                         <a role="combobox" aria-expanded="false" data-aria-controls="dropdown-testing" aria-controls="dropdown-testing" tabindex="0">Testing</a>
                         <ul id="dropdown-testing" role="listbox">
                             <li>
