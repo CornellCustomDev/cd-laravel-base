@@ -12,14 +12,14 @@ _Note: If you run composer setup inside the lando container you will need to pro
 
 The Layout is built with the Cornell Design System: https://cornellcustomdev.github.io/cds-docs/
 
-Edit the layout starting at [resources/views/components/cds/layout/app.blade.php](resources/views/components/cds/layout/app.blade.php)
+Edit the layout starting at [resources/views/components/cds/layouts/app.blade.php](resources/views/components/layouts/app.blade.php)
 
 ## Components
 
 Components are built with [FluxPro](https://fluxui.dev/docs). Examples of components are at [resources/views/examples/form.blade.php](resources/views/examples/form.blade.php)
 
 Available components:
-- [Text input](resources/views/components/cds/forms/input.blade.php)
+- [Text input](resources/views/components/cds/input.blade.php)
 
 ### Using components
 Components are used in blade files with the `<x-cds` syntax. For example, to use the text input forms component, you would write:
@@ -55,4 +55,4 @@ Most apps will require a custom implementation of the `CUAuthenticated` event li
 ### Local setup 
 Since the lando environment does not have mod_shib, the `REMOTE_USER` environment variable is used to simulate SSO authentication. Set `REMOTE_USER` in `.env` to your NetID to simulate SSO authentication.
 
-Alternatively, set `CU_AUTH_IDENTIY_MANAGER=php-saml`, which will use the [OneLogin PHP SAML Toolkit](https://github.com/SAML-Toolkits/php-saml/tree/4.x-dev) and allow you to test SSO authentication locally.
+Alternatively, set `CU_AUTH_IDENTIY_MANAGER=php-saml`, which will use the [OneLogin SAML PHP Toolkit](https://github.com/SAML-Toolkits/php-saml/tree/4.x-dev) and allow you to test SSO authentication locally.
