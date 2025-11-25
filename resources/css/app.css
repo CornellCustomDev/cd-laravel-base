@@ -105,3 +105,18 @@
         @apply text-[var(--field-desc-error)] dark:text-[var(--field-desc-error-dark)];
     }
 }
+
+/* Checkboxes */
+.checkbox-single {
+    @apply ml-5 mb-5;
+    @apply gap-1.5;
+    [data-flux-checkbox-indicator] {
+        @apply mt-[1px];
+        @apply w-[18px] h-[18px];
+        @apply border border-gray-600 rounded-xs;
+        @apply bg-gray-300/20 bg-no-repeat bg-center;
+    }
+    ui-checkbox[aria-checked="true"] [data-flux-checkbox-indicator] {
+        @apply bg-[var(--button-primary)];
+    }
+}
