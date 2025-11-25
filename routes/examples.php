@@ -13,4 +13,7 @@ Route::group(['middleware' => [CUAuth::class]], function () {
     Route::get('/examples/form', function () {
         return view('examples/form');
     })->name('examples/form');
+    Route::get('/examples/errors', function () {
+        return view('examples/errors');
+    })->name('examples/errors');
 });
