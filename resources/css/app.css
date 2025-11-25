@@ -107,9 +107,8 @@
 }
 
 /* Checkboxes */
-.checkbox-single {
-    @apply ml-5 mb-5;
-    @apply gap-1.5;
+.checkbox-single,
+.checkbox-group {
     [data-flux-checkbox-indicator] {
         @apply mt-[1px];
         @apply w-[18px] h-[18px];
@@ -118,5 +117,23 @@
     }
     ui-checkbox[aria-checked="true"] [data-flux-checkbox-indicator] {
         @apply bg-[var(--button-primary)];
+    }
+}
+.checkbox-single {
+    @apply ml-5 mb-5;
+    @apply gap-1.5;
+}
+.checkbox-group {
+    > [data-flux-label]:first-child {
+        @apply font-semibold;
+        @apply mb-1;
+    }
+    [data-flux-checkbox-group] {
+        @apply ml-5 mb-5;
+
+        > [data-flux-field] {
+            @apply gap-1.5;
+            @apply mb-0;
+        }
     }
 }

@@ -96,9 +96,18 @@
                                 By default, form fields and their associate labels and descriptions will fill all available width. form.no-constrain option lifts this limit limits these elements to 600px maximum width, which may be desirable in some cases where fields being wider than this will begin to lose their "field" appearance to the visitor's eyes.
                             </x-slot:descriptionTrailing>
                         </x-cds.input>
-                        <x-cds.checkbox-single
+                        <x-cds.checkbox
                             model="terms"
                             label="I agree to the terms and conditions"
+                        />
+                        <x-cds.checkbox
+                            label="Notification Preferences"
+                            model="notifications"
+                            :options="[
+                                'email' => 'Email',
+                                'sms' => 'Text message',
+                                'push' => 'Push Notifications',
+                            ]"
                         />
                         <x-cds.button type="submit">Submit</x-cds.button>
                         <x-cds.button type="reset">Reset</x-cds.button>
