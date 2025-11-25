@@ -12,7 +12,7 @@ _Note: If you run composer setup inside the lando container you will need to pro
 
 The Layout is built with the Cornell Design System: https://cornellcustomdev.github.io/cds-docs/
 
-Edit the layout starting at [resources/views/components/cds/layouts/app.blade.php](resources/views/components/layouts/app.blade.php)
+Edit the layout starting at [resources/views/components/layouts/app.blade.php](resources/views/components/layouts/app.blade.php)
 
 ## Components
 
