@@ -118,6 +118,9 @@
     ui-checkbox[aria-checked="true"] [data-flux-checkbox-indicator] {
         @apply bg-[var(--button-primary)];
     }
+    [data-flux-label] {
+        @apply w-max;
+    }
 }
 .checkbox-single {
     @apply ml-5 mb-5;
@@ -135,5 +138,19 @@
             @apply gap-1.5;
             @apply mb-0;
         }
+    }
+}
+
+/* Select */
+.select-dropdown {
+    &[data-flux-field] {
+        @apply mb-5;
+    }
+    select[data-flux-select-native] {
+        @apply h-8;
+        @apply py-0;
+        @apply rounded-none border-[var(--field-border)] shadow-none;
+        @apply w-max;
+        @apply text-base text-black;
     }
 }

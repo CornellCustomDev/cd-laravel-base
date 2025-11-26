@@ -109,6 +109,18 @@
                                 'push' => 'Push Notifications',
                             ]"
                         />
+                        <x-cds.select-dropdown
+                            name="industry"
+                            label="Industry"
+                        >
+                            <flux:select.option value="photography">Photography</flux:select.option>
+                            <flux:select.option value="design">Design services</flux:select.option>
+                            <flux:select.option value="web">Web development</flux:select.option>
+                            <flux:select.option value="accounting">Accounting</flux:select.option>
+                            <flux:select.option value="legal">Legal services</flux:select.option>
+                            <flux:select.option value="consulting">Consulting</flux:select.option>
+                            <flux:select.option value="other">Other</flux:select.option>
+                        </x-cds.select-dropdown>
                         <x-cds.button type="submit">Submit</x-cds.button>
                         <x-cds.button type="reset">Reset</x-cds.button>
                     </form>
