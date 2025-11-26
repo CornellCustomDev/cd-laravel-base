@@ -121,6 +121,10 @@
                             <flux:select.option value="consulting">Consulting</flux:select.option>
                             <flux:select.option value="other">Other</flux:select.option>
                         </x-cds.select-dropdown>
+                        <x-cds.textarea
+                            label="What is the purpose of the site?"
+                            description="Describe what the site is used for and what kinds of information exist on it."
+                        />
                         <x-cds.button type="submit">Submit</x-cds.button>
                         <x-cds.button type="reset">Reset</x-cds.button>
                     </form>
