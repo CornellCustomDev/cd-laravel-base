@@ -33,6 +33,7 @@
 /* Form fields */
 [data-flux-field] {
     @apply max-w-[600px];
+    @apply mb-5;
 
     form.no-constrain & {
         @apply max-w-full!;
@@ -40,6 +41,7 @@
 
     [data-flux-label] {
         @apply text-base font-medium mb-1;
+        @apply w-max;
     }
 
     [data-flux-input] input {
@@ -75,13 +77,29 @@
     }
 
     /* Checkboxes */
-    [data-flux-checkbox-group] {
-        [data-flux-field] {
-            @apply mb-1;
+    [data-flux-checkbox] {
+        @apply ml-[10px];
+        @apply cursor-pointer;
+        [data-flux-checkbox-indicator] {
+            @apply mt-[1px];
+            @apply w-[18px] h-[18px];
+            @apply border border-gray-600 dark:border-white/50 rounded-xs;
+            @apply bg-gray-300/20 bg-no-repeat bg-center;
+        }
+        &[data-checked] [data-flux-checkbox-indicator] {
+            @apply w-[18px] h-[18px];
+            @apply rounded-xs;
+            @apply bg-cds-blue dark:bg-transparent;
+            @apply text-white;
+            svg {
+                @apply dark:text-white;
+            }
         }
     }
-    [data-flux-checkbox] {
-
+    [data-flux-checkbox-group] {
+        [data-flux-field] {
+            @apply mb-0;
+        }
     }
 }
 
@@ -112,45 +130,6 @@
     [data-flux-icon] {
         @apply align-text-bottom translate-y-1.25;
         @apply text-[var(--color-cds-warning-red)] dark:text-[#e95858];
-    }
-}
-
-/* Checkboxes */
-.checkbox-single,
-.checkbox-group {
-    [data-flux-checkbox-indicator] {
-        @apply mt-[1px];
-        @apply w-[18px] h-[18px];
-        @apply border border-gray-600 dark:border-white/50 rounded-xs;
-        @apply bg-gray-300/20 bg-no-repeat bg-center;
-    }
-    ui-checkbox[aria-checked="true"] [data-flux-checkbox-indicator] {
-        @apply bg-[var(--color-cds-blue)];
-        svg {
-            @apply dark:text-white;
-        }
-        @apply text-white;
-    }
-    [data-flux-label] {
-        @apply w-max;
-    }
-}
-.checkbox-single {
-    @apply ml-5 mb-5;
-    @apply gap-1.5;
-}
-.checkbox-group {
-    > [data-flux-label]:first-child {
-        @apply font-semibold;
-        @apply mb-1;
-    }
-    [data-flux-checkbox-group] {
-        @apply ml-5 mb-5;
-
-        > [data-flux-field] {
-            @apply gap-1.5;
-            @apply mb-0;
-        }
     }
 }
 
