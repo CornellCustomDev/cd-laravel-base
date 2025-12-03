@@ -67,12 +67,16 @@
         @apply text-base text-cds-dark-silver dark:text-neutral-400;
     }
 
+    /* Text Editor */
     [data-flux-editor] {
         @apply border-cds-medium-gray rounded-none;
         @apply mb-5;
 
         button {
-            @apply bg-zinc-50;
+            @apply bg-transparent dark:bg-transparent;
+            svg {
+                @apply text-cds-medium-gray hover:text-black dark:text-white dark:hover:text-cds-light-gray;
+            }
         }
     }
 
