@@ -73,6 +73,16 @@
             @apply bg-zinc-50;
         }
     }
+
+    /* Checkboxes */
+    [data-flux-checkbox-group] {
+        [data-flux-field] {
+            @apply mb-1;
+        }
+    }
+    [data-flux-checkbox] {
+
+    }
 }
 
 /* Buttons */

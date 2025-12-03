@@ -1,37 +1,27 @@
 @props([
-    'label'   => null,   // group label OR single checkbox label
-    'model',
+    'label',   // group label OR single checkbox label
+    'name' => $attributes->whereStartsWith('wire:model')->first(),
     'options' => null,  // if array → group mode; if null → single mode
 ])
 
 {{-- Group Mode (options array is passed) --}}
 @if (is_array($options))
-    <flux:field class="checkbox-group">
-        @if ($label)
-            <flux:label>{{ $label }}</flux:label>
-        @endif
-
-        <flux:checkbox.group wire:model="{{ $model }}">
-            @foreach ($options as $value => $text)
-                <flux:checkbox
-                    :value="$value"
-                    :label="$text"
-                />
-            @endforeach
-        </flux:checkbox.group>
-
-        <flux:error name="{{ $model }}" />
-    </flux:field>
+    <flux:checkbox.group :$label :$attributes>
+        @foreach ($options as $value => $text)
+            <flux:checkbox
+                :value="$value"
+                :label="$text"
+            />
+        @endforeach
+    </flux:checkbox.group>
 
 {{-- Single Checkbox Mode --}}
 @else
-    <flux:field variant="inline" class="checkbox-single">
-        <flux:checkbox wire:model="{{ $model }}" />
+    <flux:field variant="inline">
+        <flux:checkbox :$attributes />
 
-        @if ($label)
-            <flux:label>{{ $label }}</flux:label>
-        @endif
+        <flux:label>{{ $label }}</flux:label>
 
-        <flux:error name="{{ $model }}" />
+        <flux:error :$name />
     </flux:field>
 @endif
