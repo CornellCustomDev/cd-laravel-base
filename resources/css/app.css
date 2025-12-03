@@ -64,6 +64,15 @@
         @apply mb-5;
         @apply text-base text-[var(--color-cds-dark-silver)] dark:text-neutral-400;
     }
+
+    [data-flux-editor] {
+        @apply border-cds-medium-gray rounded-none;
+        @apply mb-5;
+
+        button {
+            @apply bg-zinc-50;
+        }
+    }
 }
 
 /* Buttons */
@@ -146,16 +155,5 @@
         @apply rounded-none border-[var(--color-cds-medium-gray)] shadow-none;
         @apply w-max;
         @apply text-base text-black dark:text-white;
-    }
-}
-
-/* Textarea editor */
-.textarea-editor {
-    &[data-flux-editor] {
-        @apply border-[var(--color-cds-medium-gray)] rounded-none;
-        @apply mb-5;
-    }
-    button {
-        @apply bg-zinc-50;
     }
 }

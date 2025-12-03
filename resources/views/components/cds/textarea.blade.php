@@ -11,4 +11,4 @@
 $badge ??= $attributes->whereStartsWith('required')->isNotEmpty() ? 'Required' : null;
 @endphp
 
-<flux:editor class="textarea-editor" :$label :$toolbar :$size :$attributes :$badge :$description :$descriptionTrailing />
+<flux:editor :$label :$toolbar :$size :$attributes :$badge :$description :$descriptionTrailing />
