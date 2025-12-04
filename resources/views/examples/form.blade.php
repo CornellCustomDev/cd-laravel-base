@@ -110,22 +110,22 @@
                                 'sms' => 'Text message',
                                 'push' => 'Push Notifications',
                             ]"
+                            required
                         />
-                        <x-cds.select-dropdown
+                        <x-cds.select
                             name="industry"
                             label="Industry"
-                        >
-                            <flux:select.option value="photography">Photography</flux:select.option>
-                            <flux:select.option value="design">Design services</flux:select.option>
-                            <flux:select.option value="web">Web development</flux:select.option>
-                            <flux:select.option value="accounting">Accounting</flux:select.option>
-                            <flux:select.option value="legal">Legal services</flux:select.option>
-                            <flux:select.option value="consulting">Consulting</flux:select.option>
-                            <flux:select.option value="other">Other</flux:select.option>
-                        </x-cds.select-dropdown>
+                            :options="[
+                                'photography' => 'Photography',
+                                'design' => 'Design services',
+                                'web' => 'Web development',
+                            ]"
+                            required
+                        />
                         <x-cds.textarea
                             label="What is the purpose of the site?"
                             description="Describe what the site is used for and what kinds of information exist on it."
+                            required
                         />
                         <x-cds.button type="submit">Submit</x-cds.button>
                         <x-cds.button type="reset">Reset</x-cds.button>

@@ -2,11 +2,16 @@
     'label',   // group label OR single checkbox label
     'name' => $attributes->whereStartsWith('wire:model')->first(),
     'options' => null,  // if array → group mode; if null → single mode
+    'badge' => null,
 ])
+
+@php
+$badge ??= $attributes->whereStartsWith('required')->isNotEmpty() ? 'Required' : null;
+@endphp
 
 {{-- Group Mode (options array is passed) --}}
 @if (is_array($options))
-    <flux:checkbox.group :$label :$attributes>
+    <flux:checkbox.group :$label :$badge :$attributes >
         @foreach ($options as $value => $text)
             <flux:checkbox
                 :value="$value"

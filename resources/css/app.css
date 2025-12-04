@@ -67,19 +67,6 @@
         @apply text-base text-cds-dark-silver dark:text-neutral-400;
     }
 
-    /* Text Editor */
-    [data-flux-editor] {
-        @apply border-cds-medium-gray rounded-none;
-        @apply mb-5;
-
-        button {
-            @apply bg-transparent dark:bg-transparent;
-            svg {
-                @apply text-cds-medium-gray hover:text-black dark:text-white dark:hover:text-cds-light-gray;
-            }
-        }
-    }
-
     /* Checkboxes */
     [data-flux-checkbox] {
         @apply ml-[10px];
@@ -89,20 +76,53 @@
             @apply w-[18px] h-[18px];
             @apply border border-gray-600 dark:border-white/50 rounded-xs;
             @apply bg-gray-300/20 bg-no-repeat bg-center;
-        }
-        &[data-checked] [data-flux-checkbox-indicator] {
-            @apply w-[18px] h-[18px];
-            @apply rounded-xs;
-            @apply bg-cds-blue dark:bg-transparent;
-            @apply text-white;
-            svg {
-                @apply dark:text-white;
+
+            [data-checked] & {
+                @apply w-[18px] h-[18px];
+                @apply rounded-xs;
+                @apply bg-cds-blue dark:bg-transparent;
+                @apply text-white;
+                svg {
+                    @apply dark:text-white;
+                }
             }
         }
     }
     [data-flux-checkbox-group] {
         [data-flux-field] {
             @apply mb-0;
+        }
+    }
+
+    /* Select */
+    [data-flux-select-native] {
+        @apply cursor-pointer;
+        @apply h-8;
+        @apply py-0;
+        @apply w-max;
+        @apply rounded-none border-cds-medium-gray shadow-none;
+        @apply text-base text-black dark:text-white;
+    }
+
+    /* Text Editor */
+    [data-flux-editor] {
+        @apply border-cds-medium-gray rounded-none;
+        ui-toolbar {
+            > div {
+                @apply ml-0 mr-0;
+                [data-editor="heading"] {
+                    @apply top-[3px];
+                }
+            }
+            button {
+                @apply cursor-pointer;
+                @apply bg-transparent dark:bg-transparent;
+                @apply min-w-[unset];
+                @apply px-3;
+                svg {
+                    @apply text-cds-medium-gray hover:text-black dark:text-white dark:hover:text-cds-light-gray;
+                }
+            }
         }
     }
 }
@@ -134,19 +154,5 @@
     [data-flux-icon] {
         @apply align-text-bottom translate-y-1.25;
         @apply text-cds-warning-red dark:text-[#e95858];
-    }
-}
-
-/* Select */
-.select-dropdown {
-    &[data-flux-field] {
-        @apply mb-5;
-    }
-    select[data-flux-select-native] {
-        @apply h-8;
-        @apply py-0;
-        @apply rounded-none border-cds-medium-gray shadow-none;
-        @apply w-max;
-        @apply text-base text-black dark:text-white;
     }
 }
