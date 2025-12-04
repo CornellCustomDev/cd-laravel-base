@@ -5,6 +5,7 @@ namespace App\Livewire;
 use Livewire\Component;
 use App\Models\User;
 use Livewire\WithPagination;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Livewire\Attributes\Title;
 use Livewire\Attributes\Computed;
 
@@ -17,7 +18,7 @@ class UserTable extends Component
 {
     use WithPagination;
 
-    public $users;
+    // public $users;
     public $sortBy = 'name';
     public $sortDirection = 'desc';
 
@@ -34,7 +35,7 @@ class UserTable extends Component
         return view('livewire.user-table');
     }
 
-       public function sort($column) {
+    public function sort($column) {
         if ($this->sortBy === $column) {
             $this->sortDirection = $this->sortDirection === 'asc' ? 'desc' : 'asc';
         } else {
@@ -46,8 +47,15 @@ class UserTable extends Component
     #[Computed]
     public function users()
     {
-        return User::query()
-            ->tap(fn ($query) => $this->sortBy ? $query->orderBy($this->sortBy, $this->sortDirection) : $query)
-            ->paginate(5);
+        // return User::query()
+        //     ->tap(fn ($query) => $this->sortBy ? $query->orderBy($this->sortBy, $this->sortDirection) : $query)
+        //     ->paginate(5);
+        return User::orderBy($this->sortBy, $this->sortDirection)->paginate(5);
     }
+
+    // #[Computed]
+    // public function paginator()
+    // {
+    //     return new LengthAwarePaginator(items: range(1, 50), total: 100, perPage: 5, currentPage: 1);
+    // }
 }
