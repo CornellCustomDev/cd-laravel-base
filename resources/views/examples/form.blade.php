@@ -96,6 +96,43 @@
                                 By default, form fields and their associate labels and descriptions will fill all available width. form.no-constrain option lifts this limit limits these elements to 600px maximum width, which may be desirable in some cases where fields being wider than this will begin to lose their "field" appearance to the visitor's eyes.
                             </x-slot:descriptionTrailing>
                         </x-cds.input>
+                    </form>
+                    <flux:separator class="mb-4" />
+                    <form>
+                        <x-cds.checkbox
+                            name="terms"
+                            required
+                            label="I agree to the terms and conditions"
+                        />
+                        <flux:separator class="mb-4" />
+                        <x-cds.checkbox
+                            name="notifications"
+                            label="Notification Preferences"
+                            :options="[
+                                'email' => 'Email',
+                                'sms' => 'Text message',
+                                'push' => 'Push Notifications',
+                            ]"
+                            required
+                            error:message="This field has an error."
+                        />
+                        <flux:separator class="mb-4" />
+                        <x-cds.select
+                            name="industry"
+                            label="Industry"
+                            :options="[
+                                'photography' => 'Photography',
+                                'design' => 'Design services',
+                                'web' => 'Web development',
+                            ]"
+                            required
+                        />
+                        <flux:separator class="mb-4" />
+                        <x-cds.textarea
+                            label="What is the purpose of the site?"
+                            description="Describe what the site is used for and what kinds of information exist on it."
+                            required
+                        />
                         <x-cds.button type="submit">Submit</x-cds.button>
                         <x-cds.button type="reset">Reset</x-cds.button>
                     </form>
