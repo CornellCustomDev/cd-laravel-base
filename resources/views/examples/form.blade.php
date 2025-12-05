@@ -97,11 +97,14 @@
                             </x-slot:descriptionTrailing>
                         </x-cds.input>
                     </form>
+                    <flux:separator class="mb-4" />
                     <form>
                         <x-cds.checkbox
                             name="terms"
+                            required
                             label="I agree to the terms and conditions"
                         />
+                        <flux:separator class="mb-4" />
                         <x-cds.checkbox
                             name="notifications"
                             label="Notification Preferences"
@@ -111,7 +114,9 @@
                                 'push' => 'Push Notifications',
                             ]"
                             required
+                            error:message="This field has an error."
                         />
+                        <flux:separator class="mb-4" />
                         <x-cds.select
                             name="industry"
                             label="Industry"
@@ -122,6 +127,7 @@
                             ]"
                             required
                         />
+                        <flux:separator class="mb-4" />
                         <x-cds.textarea
                             label="What is the purpose of the site?"
                             description="Describe what the site is used for and what kinds of information exist on it."
