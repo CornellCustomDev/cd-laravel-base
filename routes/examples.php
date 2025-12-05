@@ -6,5 +6,8 @@ Route::get('/examples/cds', function () {
 Route::get('/examples/form', function () {
     return view('examples/form');
 })->name('examples/form');
-
+Route::get('/examples/errors', function () {
+    return view('examples/errors');
+})->name('examples/errors');
 Route::get('/examples/table', \App\Livewire\UserTable::class)->name('examples/table');
+
