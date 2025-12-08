@@ -18,6 +18,9 @@
                     <li>
                         <a href="{{ route('examples/errors') }}">Errors</a>
                     </li>
+                    <li>
+                        <a href="{{ route('examples/table') }}">Table</a>
+                    </li>
                 </ul>
             </li>
         </ul>
