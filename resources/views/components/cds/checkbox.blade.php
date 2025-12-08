@@ -25,7 +25,7 @@ $badge ??= $attributes->whereStartsWith('required')->isNotEmpty() ? 'Required' :
     <flux:field variant="inline">
         <flux:checkbox :$attributes />
 
-        <flux:label>{{ $label }}</flux:label>
+        <flux:label :$badge>{{ $label }}</flux:label>
 
         <flux:error :$name />
     </flux:field>

@@ -101,8 +101,10 @@
                     <form>
                         <x-cds.checkbox
                             name="terms"
-                            required
                             label="I agree to the terms and conditions"
+                            required
+                            error:message="This field has an error."
+
                         />
                         <flux:separator class="mb-4" />
                         <x-cds.checkbox
@@ -126,12 +128,16 @@
                                 'web' => 'Web development',
                             ]"
                             required
+                            error:message="This field has an error."
+
                         />
                         <flux:separator class="mb-4" />
                         <x-cds.textarea
                             label="What is the purpose of the site?"
                             description="Describe what the site is used for and what kinds of information exist on it."
                             required
+                            error:message="This field has an error."
+
                         />
                         <x-cds.button type="submit">Submit</x-cds.button>
                         <x-cds.button type="reset">Reset</x-cds.button>
