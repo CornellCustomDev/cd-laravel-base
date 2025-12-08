@@ -92,6 +92,9 @@
         [data-flux-field] {
             @apply mb-0;
         }
+        + [data-flux-error] {
+            margin-top: calc(var(--spacing) * 0) !important;
+        }
     }
 
     /* Select */
@@ -102,6 +105,9 @@
         @apply w-max;
         @apply rounded-none border-cds-medium-gray shadow-none;
         @apply text-base text-black dark:text-white;
+        + [data-flux-error] {
+            margin-top: calc(var(--spacing) * 0) !important;
+        }
     }
 
     /* Text Editor */
@@ -123,6 +129,12 @@
                     @apply text-cds-medium-gray hover:text-black dark:text-white dark:hover:text-cds-light-gray;
                 }
             }
+        }
+        + [data-flux-error] {
+            margin-top: calc(var(--spacing) * 1) !important;
+        }
+        .ProseMirror-focused {
+            @apply focus:default-focus-ring;
         }
     }
 }
