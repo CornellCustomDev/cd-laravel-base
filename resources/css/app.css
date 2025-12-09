@@ -30,6 +30,14 @@
     --color-cds-medium-gray: #808080;
 }
 
+@utility default-focus-ring {
+    outline: -webkit-focus-ring-color auto 1px;
+}
+
+@utility focus-ring {
+    @apply focus:default-focus-ring focus:shadow-none;
+}
+
 /* Form fields */
 [data-flux-field] {
     @apply max-w-[600px];
@@ -133,9 +141,9 @@
         + [data-flux-error] {
             margin-top: calc(var(--spacing) * 1) !important;
         }
-        /* .ProseMirror-focused {
+        .ProseMirror-focused {
             @apply focus:default-focus-ring;
-        } */
+        }
     }
 }
 

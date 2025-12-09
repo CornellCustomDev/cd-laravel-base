@@ -9,7 +9,13 @@ $badge ??= $attributes->whereStartsWith('required')->isNotEmpty() ? 'Required' :
 @endphp
 
 <flux:select :$label :$badge :$attributes>
-    <flux:select.option value="" label="" />
+    <flux:select.option
+        value=""
+        label="Select an option"
+        disabled
+        selected
+        hidden
+    />
     @foreach ($options as $value => $text)
         <flux:select.option :$value :label="$text" />
     @endforeach
