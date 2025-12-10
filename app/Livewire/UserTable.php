@@ -27,11 +27,7 @@ class UserTable extends Component
     public function mount()
     {
         $this->allUsers = User::select('id', 'name')->get();
-        if (!is_null($this->selectedUserId)) {
-            $this->selectedUser = $this->allUsers->firstWhere('id', $this->selectedUserId);
-        } else {
-            $this->selectedUser = null;
-        }
+        $this->selectedUser = $this->selectedUserId ? $this->allUsers->firstWhere('id', $this->selectedUserId) : null;
     }
 
     public function render()
