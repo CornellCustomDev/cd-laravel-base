@@ -14,7 +14,7 @@
             wire:model.live="selectedUserId"
         />
 
-        Selected user: {{ $selectedUser->name ?? 'None' }}
+        Selected user: {{ $selectedUser?->name ?? 'None' }}
 
         <flux:separator class="mb-4" />
 
