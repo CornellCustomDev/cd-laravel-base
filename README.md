@@ -9,7 +9,8 @@ FluxPro components will not be accessible until you provide Flux repo credential
 _Note: If you run composer setup inside the lando container you will need to provide a GitHub Token to access the private https://github.com/CornellCustomDev/cds repository._
 
 ## Run npm
-Run teh following commands for local environment:
+Run the following commands for local environment:
+
     npm run build
     lando artisan optimize:clear
 
