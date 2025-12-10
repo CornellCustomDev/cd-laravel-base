@@ -15,13 +15,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run(): void
     {
-        User::create([
-            'name' => Str::random(10),
-            'email' => Str::random(10) . '@example.com',
-            'password' => Hash::make('password'),
-        ]);
-
-        // use factories for generating multiple records
+       // use factories for generating multiple records
         User::factory()->count(50)->create();
     }
 }
