@@ -48,7 +48,7 @@ class UserTable extends Component
 
     public function updatedSelectedUserId($userId)
     {
-        $this->selectedUser = $this->allUsers->firstWhere('id', $userId);
+        $this->selectedUser = User::find($userId);
     }
 
     #[Computed]
