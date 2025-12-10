@@ -8,7 +8,7 @@
         <flux:separator />
 
         <x-cds.select
-            name="$allUsers"
+            name="allUsers"
             label="Select Users"
             :options="$this->allUsers->pluck('name', 'id')->toArray()"
             wire:model.live="selectedUserId"
