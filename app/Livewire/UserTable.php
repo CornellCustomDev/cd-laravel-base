@@ -19,7 +19,7 @@ class UserTable extends Component
 
     public $allUsers;
     public $selectedUser;
-    public $selectedUserId = null;   //you can set a default user id here
+    public $selectedUserId = null;  // you can set a default user id here
     public $sortBy = 'name';
     public $sortDirection = 'desc';
 
