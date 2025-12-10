@@ -17,8 +17,10 @@ Run the following commands for local environment:
 ## Recreate database with User table data:
 
 Run this command to recreate your database and seed users table:
+
     lando artisan migrate:fresh --seed  
-Notes: The migrate:refresh command will roll back all of your migrations and then execute the migrate command. This command effectively re-creates your entire database.
+
+**Notes**: The migrate:refresh command will roll back all of your migrations and then execute the migrate command. This command effectively re-creates your entire database.
 
 ## Layout
 
