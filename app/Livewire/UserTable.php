@@ -48,7 +48,6 @@ class UserTable extends Component
 
     public function updatedSelectedUserId($userId)
     {
-        $this->selectedUserId = $userId;
         $this->selectedUser = $this->allUsers->firstWhere('id', $userId);
     }
 
