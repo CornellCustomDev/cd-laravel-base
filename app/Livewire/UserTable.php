@@ -48,7 +48,11 @@ class UserTable extends Component
 
     public function updatedSelectedUserId($userId)
     {
-        $this->selectedUser = User::find($userId);
+        if (is_null($userId) || !($user = User::find($userId))) {
+            $this->selectedUser = null;
+        } else {
+            $this->selectedUser = $user;
+        }
     }
 
     #[Computed]
