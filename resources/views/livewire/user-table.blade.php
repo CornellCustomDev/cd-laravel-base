@@ -7,11 +7,21 @@
 
         <flux:separator />
 
+        <x-cds.select
+            name="$allUsers"
+            label="Select Users"
+            :options="$this->allUsers->pluck('name', 'id')->toArray()"
+            wire:model.live="selectedUserId"
+        />
+
+        Selected user: {{ $selectedUser->name ?? 'None' }}
+
+        <flux:separator class="mb-4" />
+
         <x-layouts.section class="region padded-small">
             <h2>Users Table</h2>
 
-            <flux:table class="cds-table" >
-                   {{-- :paginate="$users" --}}
+            <flux:table class="cds-table" :paginate="$this->users" >
 
                 <flux:table.columns>
                     <flux:table.column sortable :sorted="$sortBy === 'name'" :direction="$sortDirection" wire:click="sort('name')">Name</flux:table.column>
