@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Users;
 
 use Livewire\Component;
 use App\Models\User;
@@ -32,8 +32,8 @@ class UserTable extends Component
 
     public function render()
     {
-
-        return view('livewire.user-table');
+        // add additional data to the view if needed
+        return view('livewire.users.user-table');
     }
 
     public function sort($column) {
