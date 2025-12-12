@@ -5,10 +5,8 @@ namespace App\Livewire\Users;
 use Livewire\Component;
 use App\Models\User;
 use Livewire\WithPagination;
-use Illuminate\Pagination\LengthAwarePaginator;
 use Livewire\Attributes\Title;
 use Livewire\Attributes\Computed;
-
 
 #[Title("CD Laravel Base - User Table Example")]
 
@@ -17,18 +15,9 @@ class UserTable extends Component
 {
     use WithPagination;
 
-    public $allUsers;
-    public $selectedUser;
     public $selectedUserId = null;  // you can set a default user id here
     public $sortBy = 'name';
-    public $sortDirection = 'desc';
-
-
-    public function mount()
-    {
-        $this->allUsers = User::select('id', 'name')->get();
-        $this->selectedUser = $this->selectedUserId ? User::find($this->selectedUserId) : null;
-    }
+    public $sortDirection = 'asc';
 
     public function render()
     {
@@ -43,15 +32,6 @@ class UserTable extends Component
         } else {
             $this->sortBy = $column;
             $this->sortDirection = 'asc';
-        }
-    }
-
-    public function updatedSelectedUserId($userId)
-    {
-        if (is_null($userId) || !($user = User::find($userId))) {
-            $this->selectedUser = null;
-        } else {
-            $this->selectedUser = $user;
         }
     }
 
