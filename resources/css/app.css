@@ -76,29 +76,32 @@
     }
 
     /* Checkboxes */
-    [data-flux-checkbox] {
-        @apply ml-[10px];
-        @apply cursor-pointer;
-        [data-flux-checkbox-indicator] {
-            @apply mt-[1px];
-            @apply w-[18px] h-[18px];
-            @apply border border-gray-600 dark:border-white/50 rounded-xs;
-            @apply bg-gray-300/20 bg-no-repeat bg-center;
-
-            [data-checked] & {
-                @apply w-[18px] h-[18px];
-                @apply rounded-xs;
-                @apply bg-cds-blue dark:bg-transparent;
-                @apply text-white;
-                svg {
-                    @apply dark:text-white;
-                }
-            }
-        }
-    }
     [data-flux-checkbox-group] {
         [data-flux-field] {
             @apply mb-0;
+        }
+        [data-flux-checkbox] {
+            @apply ml-0;
+            @apply cursor-pointer;
+            [data-flux-checkbox-indicator] {
+                @apply mt-[1px] ml-0 mr-0;
+                @apply w-[18px] h-[18px];
+                @apply border border-gray-600 dark:border-white/50 rounded-xs;
+                @apply bg-gray-300/20 bg-no-repeat bg-center;
+
+                [data-checked] & {
+                    @apply w-[18px] h-[18px];
+                    @apply rounded-xs;
+                    @apply bg-cds-blue dark:bg-transparent;
+                    @apply text-white;
+                    svg {
+                        @apply dark:text-white;
+                    }
+                }
+            }
+        }
+        [data-flux-label] {
+            @apply ml-2;
         }
         + [data-flux-error] {
             margin-top: calc(var(--spacing) * 0) !important;
