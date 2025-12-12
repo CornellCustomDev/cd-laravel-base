@@ -90,7 +90,6 @@
                 @apply bg-gray-300/20 bg-no-repeat bg-center;
 
                 [data-checked] & {
-                    @apply w-[18px] h-[18px];
                     @apply rounded-xs;
                     @apply bg-cds-blue dark:bg-transparent;
                     @apply text-white;
