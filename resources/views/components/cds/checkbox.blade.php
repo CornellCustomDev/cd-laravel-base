@@ -2,11 +2,14 @@
     'label',   // group label OR single checkbox label
     'name' => $attributes->whereStartsWith('wire:model')->first(),
     'options' => null,  // if array → group mode; if null → single mode
+    'value' => null,
+    'text' => null,
     'badge' => null,
 ])
 
 @php
 $badge ??= $attributes->whereStartsWith('required')->isNotEmpty() ? 'Required' : null;
+$text ??= $value;
 @endphp
 
 {{-- Group Mode (options array is passed) --}}
@@ -22,11 +25,10 @@ $badge ??= $attributes->whereStartsWith('required')->isNotEmpty() ? 'Required' :
 
 {{-- Single Checkbox Mode --}}
 @else
-    <flux:field variant="inline">
-        <flux:checkbox :$attributes />
-
-        <flux:label :$badge>{{ $label }}</flux:label>
-
-        <flux:error :$name />
-    </flux:field>
+    <flux:checkbox.group :$label :$badge :$attributes >
+        <flux:checkbox
+            :value="$value"
+            :label="$text"
+        />
+    </flux:checkbox.group>
 @endif
