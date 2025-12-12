@@ -71,7 +71,7 @@
     }
 
     [data-flux-description] {
-        @apply mb-5;
+        @apply mb-1;
         @apply text-base text-cds-dark-silver dark:text-neutral-400;
     }
 
