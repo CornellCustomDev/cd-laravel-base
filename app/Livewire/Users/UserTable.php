@@ -15,7 +15,6 @@ class UserTable extends Component
 {
     use WithPagination;
 
-    public $selectedUserId = null;  // you can set a default user id here
     public $sortBy = 'name';
     public $sortDirection = 'asc';
 

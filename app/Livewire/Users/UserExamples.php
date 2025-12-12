@@ -17,7 +17,6 @@ class UserExamples extends Component
     public function mount()
     {
         $this->users = User::select('id', 'name')->get();
-        $this->selectedUser = $this->userId ? User::find($this->userId) : null;
     }
 
     public function updatedUserId($userId)
