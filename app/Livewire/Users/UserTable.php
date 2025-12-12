@@ -38,9 +38,7 @@ class UserTable extends Component
     #[Computed]
     public function users()
     {
-        return User::query()
-            ->tap(fn ($query) => $this->sortBy ? $query->orderBy($this->sortBy, $this->sortDirection) : $query)
-            ->paginate(5);
+        return User::orderBy($this->sortBy, $this->sortDirection)->paginate(5);
             // simple pagination:
             // return User::orderBy($this->sortBy, $this->sortDirection)->simplePaginate(5);
     }
