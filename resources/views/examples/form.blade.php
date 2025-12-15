@@ -13,7 +13,7 @@
                 </div>
             </div>
         </div>
-        <div class="region padded-small tint">
+        <div class="region padded tint">
             <div class="container container-full">
                 <div class="section">
                     <h2>Basic Text</h2>
@@ -101,7 +101,9 @@
                     <form>
                         <x-cds.checkbox
                             name="terms"
-                            label="I agree to the terms and conditions"
+                            label="Terms and Conditions"
+                            description="Please review our terms and conditions before proceeding."
+                            value="I agree to the terms and conditions"
                             required
                             error:message="This field has an error."
 
@@ -139,6 +141,8 @@
                             error:message="This field has an error."
 
                         />
+                        <flux:separator class="mb-4" />
+
                         <x-cds.button type="submit">Submit</x-cds.button>
                         <x-cds.button type="reset">Reset</x-cds.button>
                     </form>

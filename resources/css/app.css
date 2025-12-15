@@ -30,6 +30,14 @@
     --color-cds-medium-gray: #808080;
 }
 
+@utility default-focus-ring {
+    outline: -webkit-focus-ring-color auto 1px;
+}
+
+@utility focus-ring {
+    @apply focus:default-focus-ring focus:shadow-none;
+}
+
 /* Form fields */
 [data-flux-field] {
     @apply max-w-[600px];
@@ -63,34 +71,36 @@
     }
 
     [data-flux-description] {
-        @apply mb-5;
+        @apply mb-1;
         @apply text-base text-cds-dark-silver dark:text-neutral-400;
     }
 
     /* Checkboxes */
-    [data-flux-checkbox] {
-        @apply ml-[10px];
-        @apply cursor-pointer;
-        [data-flux-checkbox-indicator] {
-            @apply mt-[1px];
-            @apply w-[18px] h-[18px];
-            @apply border border-gray-600 dark:border-white/50 rounded-xs;
-            @apply bg-gray-300/20 bg-no-repeat bg-center;
-
-            [data-checked] & {
-                @apply w-[18px] h-[18px];
-                @apply rounded-xs;
-                @apply bg-cds-blue dark:bg-transparent;
-                @apply text-white;
-                svg {
-                    @apply dark:text-white;
-                }
-            }
-        }
-    }
     [data-flux-checkbox-group] {
         [data-flux-field] {
             @apply mb-0;
+        }
+        [data-flux-checkbox] {
+            @apply ml-0;
+            @apply cursor-pointer;
+            [data-flux-checkbox-indicator] {
+                @apply mt-[1px] ml-0 mr-0;
+                @apply w-[18px] h-[18px];
+                @apply border border-gray-600 dark:border-white/50 rounded-xs;
+                @apply bg-gray-300/20 bg-no-repeat bg-center;
+
+                [data-checked] & {
+                    @apply rounded-xs;
+                    @apply bg-cds-blue dark:bg-transparent;
+                    @apply text-white;
+                    svg {
+                        @apply dark:text-white;
+                    }
+                }
+            }
+        }
+        [data-flux-label] {
+            @apply ml-2;
         }
         + [data-flux-error] {
             margin-top: calc(var(--spacing) * 0) !important;
@@ -133,9 +143,9 @@
         + [data-flux-error] {
             margin-top: calc(var(--spacing) * 1) !important;
         }
-        /* .ProseMirror-focused {
+        .ProseMirror-focused {
             @apply focus:default-focus-ring;
-        } */
+        }
     }
 }
 
