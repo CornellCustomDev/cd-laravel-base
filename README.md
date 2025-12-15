@@ -8,6 +8,20 @@ FluxPro components will not be accessible until you provide Flux repo credential
 
 _Note: If you run composer setup inside the lando container you will need to provide a GitHub Token to access the private https://github.com/CornellCustomDev/cds repository._
 
+## Run npm
+Run the following commands for local environment:
+
+    npm run build
+    lando artisan optimize:clear
+
+## Recreate database with User table data:
+
+Run this command to recreate your database and seed users table:
+
+    lando artisan migrate:fresh --seed  
+
+**Notes**: The migrate:refresh command will roll back all of your migrations and then execute the migrate command. This command effectively re-creates your entire database.
+
 ## Layout
 
 The Layout is built with the Cornell Design System: https://cornellcustomdev.github.io/cds-docs/
