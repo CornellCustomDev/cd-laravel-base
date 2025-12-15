@@ -1,25 +1,25 @@
 <x-layouts.main-article>
     <h1>Edit User</h1>
-    <h2>{{ $user->name }}</h2>
+    <h2>{{ $name }}</h2>
 
-    <form wire:submit.prevent="updateUser">
+    <form wire:submit.prevent="save">
         <x-cds.input
             label="Name"
-            wire:model="user.name"
+            wire:model="name"
             required
         />
 
         <x-cds.input
             label="Email"
             type="email"
-            wire:model="user.email"
+            wire:model="email"
             required
         />
 
         <x-cds.button type="submit">
             Save Changes
         </x-cds.button>
-        <x-cds.button href="{{ route('admin.users') }}">
+        <x-cds.button onclick="history.back()">
             Cancel
         </x-cds.button>
     </form>
