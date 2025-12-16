@@ -218,3 +218,13 @@
         }
     }
 }
+[data-flux-pagination] {
+    button {
+        @apply cursor-pointer;
+        @apply border-0 bg-white;
+        @apply font-sans;
+    }
+    [aria-current="page"] {
+        @apply font-bold;
+    }
+}
