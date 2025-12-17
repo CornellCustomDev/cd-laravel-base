@@ -13,6 +13,7 @@
     <style>
         @import "{{ asset('cds/css/base.css') }}" layer(base);
     </style>
+    @vite('resources/css/app.scss')
 
     <!-- Cornell.edu Typography -->
     <link rel="stylesheet" href="https://use.typekit.net/nwp2wku.css">

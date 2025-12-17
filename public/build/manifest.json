@@ -1,4 +1,13 @@
 {
+  "resources/css/app.scss": {
+    "file": "assets/app-ppwW4VC5.css",
+    "src": "resources/css/app.scss",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
   "resources/css/flux-cds.css": {
     "file": "assets/flux-cds-BcYKR7z0.css",
     "src": "resources/css/flux-cds.css",
