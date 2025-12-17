@@ -10,6 +10,15 @@
         <x-layouts.section class="region padded-small">
             <h2>Users Table</h2>
 
+            <flux:field class="mb-4">
+                <flux:label>Filter by name</flux:label>
+                <flux:input
+                    type="text"
+                    placeholder="Search users..."
+                    wire:model.debounce.300ms="nameFilter"
+                />
+            </flux:field>
+
             <flux:table class="cds-table" :paginate="$this->users" >
 
                 <flux:table.columns>

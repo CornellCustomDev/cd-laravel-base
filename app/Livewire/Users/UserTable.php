@@ -17,6 +17,7 @@ class UserTable extends Component
 
     public $sortBy = 'name';
     public $sortDirection = 'asc';
+    public $nameFilter = '';
 
     public function render()
     {
@@ -34,12 +35,27 @@ class UserTable extends Component
         }
     }
 
+    public function filterByName(string $name): void
+    {
+        $this->nameFilter = $name;
+        $this->resetPage();
+    }
+
+    public function updatingNameFilter(): void
+    {
+        $this->resetPage();
+    }
+
     #[Computed]
     public function users()
     {
-        return User::orderBy($this->sortBy, $this->sortDirection)->paginate(5);
-            // simple pagination:
-            // return User::orderBy($this->sortBy, $this->sortDirection)->simplePaginate(5);
+        return User::query()
+            ->when($this->nameFilter !== '', function ($query) {
+                $query->where('name', 'like', '%' . $this->nameFilter . '%');
+            })
+            ->orderBy($this->sortBy, $this->sortDirection)
+            ->paginate(5);
     }
+
 
 }
