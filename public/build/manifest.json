@@ -1,11 +1,11 @@
 {
-  "resources/css/app.css": {
-    "file": "assets/app-BcYKR7z0.css",
-    "src": "resources/css/app.css",
+  "resources/css/flux-cds.css": {
+    "file": "assets/flux-cds-BcYKR7z0.css",
+    "src": "resources/css/flux-cds.css",
     "isEntry": true,
-    "name": "app",
+    "name": "flux-cds",
     "names": [
-      "app.css"
+      "flux-cds.css"
     ]
   },
   "resources/js/app.js": {

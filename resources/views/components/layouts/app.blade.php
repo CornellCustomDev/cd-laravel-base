@@ -9,7 +9,7 @@
 
     <link rel="icon" href="{{ asset('cds/favicon.ico') }}" type="image/vnd.microsoft.icon"/>
 
-    @vite('resources/css/app.css')
+    @vite('resources/css/flux-cds.css')
     <style>
         @import "{{ asset('cds/css/base.css') }}" layer(base);
     </style>
