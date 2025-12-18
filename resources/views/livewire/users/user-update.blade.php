@@ -21,7 +21,7 @@
         <x-cds.button type="submit">
             Save Changes
         </x-cds.button>
-        <x-cds.button :href="route('admin.users')" variant="secondary">
+        <x-cds.button :href="route('admin.users')">
             Cancel
         </x-cds.button>
     </form>
