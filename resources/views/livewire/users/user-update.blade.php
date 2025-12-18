@@ -1,8 +1,10 @@
 <x-layouts.main-article>
     <h1>Edit User</h1>
-    <h2>{{ $name }}</h2>
+    <h2>{{ $user->getOriginal('name') }}</h2>
 
     <form wire:submit.prevent="save">
+        <x-cds.callout-error heading="Please address these errors" />
+
         <x-cds.input
             label="Name"
             wire:model="name"

@@ -15,10 +15,10 @@ class UserUpdate extends Component
 {
     public User $user;
 
-    #[Validate('required|string|max:255')]
+    #[Validate('required|string|min:3|max:255')]
     public string $name = '';
 
-    #[Validate('required|email|max:255')]
+    #[Validate('required|email|min:5|max:255')]
     public string $email = '';
 
     public function mount(User $user): void
