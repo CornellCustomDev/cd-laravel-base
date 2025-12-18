@@ -1,13 +1,11 @@
 @props([
     'icon' => 'exclamation-triangle',
     'heading' => 'Errors Found',
+    'errors' => $errors,
 ])
 @if($errors->any())
-<flux:callout
-    icon="{{ $icon }}"
-    {{ $attributes }}
->
-    <flux:callout.heading>{{ $heading }}</flux:callout.heading>
+<flux:callout :$attributes >
+    <flux:callout.heading icon="{{ $icon }}">{{ $heading }}</flux:callout.heading>
 
     <flux:callout.text>
         <ul>
