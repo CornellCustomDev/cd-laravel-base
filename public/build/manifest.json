@@ -1,11 +1,20 @@
 {
-  "resources/css/app.css": {
-    "file": "assets/app-QUipJ56u.css",
-    "src": "resources/css/app.css",
+  "resources/css/app.scss": {
+    "file": "assets/app-ppwW4VC5.css",
+    "src": "resources/css/app.scss",
     "isEntry": true,
     "name": "app",
     "names": [
       "app.css"
+    ]
+  },
+  "resources/css/flux-cds.css": {
+    "file": "assets/flux-cds-BcYKR7z0.css",
+    "src": "resources/css/flux-cds.css",
+    "isEntry": true,
+    "name": "flux-cds",
+    "names": [
+      "flux-cds.css"
     ]
   },
   "resources/js/app.js": {
