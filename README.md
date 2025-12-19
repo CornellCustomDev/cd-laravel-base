@@ -8,11 +8,20 @@ FluxPro components will not be accessible until you provide Flux repo credential
 
 _Note: If you run composer setup inside the lando container you will need to provide a GitHub Token to access the private https://github.com/CornellCustomDev/cds repository._
 
+### Local authentication setup
+
+```
+# File: .env
+REMOTE_USER=your_netid_here
+```
+This skips SSO authentication, see [below](#sso-authentication) for more details on SSO setup.
+
 ## Run npm
 Run the following commands for local environment:
 
+    npm install
     npm run build
-    lando artisan optimize:clear
+    lando artisan optimize
 
 ## Recreate database with User table data:
 
@@ -26,14 +35,14 @@ Run this command to recreate your database and seed users table:
 
 The Layout is built with the Cornell Design System: https://cornellcustomdev.github.io/cds-docs/
 
-Edit the layout starting at [resources/views/components/cds/layout/app.blade.php](resources/views/components/cds/layout/app.blade.php)
+Edit the layout starting at [resources/views/components/layouts/app.blade.php](resources/views/components/layouts/app.blade.php)
 
 ## Components
 
 Components are built with [FluxPro](https://fluxui.dev/docs). Examples of components are at [resources/views/examples/form.blade.php](resources/views/examples/form.blade.php)
 
 Available components:
-- [Text input](resources/views/components/cds/forms/input.blade.php)
+- [Text input](resources/views/components/cds/input.blade.php)
 
 ### Using components
 Components are used in blade files with the `<x-cds` syntax. For example, to use the text input forms component, you would write:
@@ -57,3 +66,24 @@ You can also pass additional attributes to the component and they will be applie
 Common and defaulted attributes can be found in the component's blade file, generally as `@prop` definitions so that an IDE can provide autocomplete.
 
 The underlying Flux component documentation is linked from the blade file and should be consulted for additional options and usage.
+
+## SSO Authentication
+
+The starter kit can use Cornell's SSO for authentication. [routes/examples.php](routes/examples.php) demonstrates how to use CUAuth to require SSO login for specific pages.
+
+The defaults set in [config/cu-auth.php](config/cu-auth.php) use Apache mod_shib and will create a new user if one does not exist. See the config file for other options which can also be set with environment variables.
+
+Most apps will require a custom implementation of the `CUAuthenticated` event listener to handle user authorization. See [app/Listeners/CUAuthorizeUser.php](app/Listeners/CUAuthorizeUser.php) for an example of how to implement this listener.
+
+### Local setup 
+
+Recommended
+```
+CU_AUTH_IDENTIY_MANAGER=php-saml
+```
+This will allow you to test SSO authentication locally using the [OneLogin SAML PHP Toolkit](https://github.com/SAML-Toolkits/php-saml/tree/4.x-dev).
+
+Alternatively, you can skip authentication locally:
+```
+REMOTE_USER=your_netid_here
+```
