@@ -11,7 +11,7 @@ use Livewire\Component;
 #[Layout('components.layouts.app', [
     'title' => 'Edit User',
 ])]
-class UserUpdate extends Component
+class UserEdit extends Component
 {
     public User $user;
 
