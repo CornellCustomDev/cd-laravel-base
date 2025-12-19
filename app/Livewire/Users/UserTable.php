@@ -27,7 +27,7 @@ class UserTable extends Component
 
     public function sort($column) {
 
-       if ($this->sortBy === $column) {
+        if ($this->sortBy === $column) {
             $this->sortDirection = $this->sortDirection === 'asc' ? 'desc' : 'asc';
         } else {
             $this->sortBy = $column;
@@ -35,13 +35,9 @@ class UserTable extends Component
         }
     }
 
-    public function filterByName(string $name): void
-    {
-        $this->nameFilter = $name;
-        $this->resetPage();
-    }
 
-    public function updatingNameFilter(): void
+    // Livewire hook: runs after $nameFilter changes
+    public function updatedNameFilter(): void
     {
         $this->resetPage();
     }
@@ -57,5 +53,5 @@ class UserTable extends Component
             ->paginate(5);
     }
 
-
+    
 }

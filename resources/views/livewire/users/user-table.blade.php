@@ -12,11 +12,22 @@
 
             <flux:field class="mb-4">
                 <flux:label>Filter by name</flux:label>
-                <flux:input
-                    type="text"
-                    placeholder="Search users..."
-                    wire:model.debounce.300ms="nameFilter"
-                />
+                <div class="flex items-center gap-2">
+                    <input
+                        type="text"
+                        placeholder="Search users..."
+                        class="flux-input w-full"
+                        x-on:input="$wire.set('nameFilter', $event.target.value)"
+                   />
+                    <button
+                        type="button"
+                        class="flux-button flux-button--ghost flux-button--sm"
+                        x-on:click="$wire.set('nameFilter', '')"
+                        @disabled($nameFilter === '')
+                   >
+                        Reset
+                    </button>
+                </div>
             </flux:field>
 
             <flux:table class="cds-table" :paginate="$this->users" >
