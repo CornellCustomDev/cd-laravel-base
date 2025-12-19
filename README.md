@@ -8,11 +8,20 @@ FluxPro components will not be accessible until you provide Flux repo credential
 
 _Note: If you run composer setup inside the lando container you will need to provide a GitHub Token to access the private https://github.com/CornellCustomDev/cds repository._
 
+### Local authentication setup
+
+```
+# File: .env
+REMOTE_USER=your_netid_here
+```
+This skips SSO authentication, see [below](#sso-authentication) for more details on SSO setup.
+
 ## Run npm
 Run the following commands for local environment:
 
+    npm install
     npm run build
-    lando artisan optimize:clear
+    lando artisan optimize
 
 ## Recreate database with User table data:
 
@@ -67,6 +76,14 @@ The defaults set in [config/cu-auth.php](config/cu-auth.php) use Apache mod_shib
 Most apps will require a custom implementation of the `CUAuthenticated` event listener to handle user authorization. See [app/Listeners/CUAuthorizeUser.php](app/Listeners/CUAuthorizeUser.php) for an example of how to implement this listener.
 
 ### Local setup 
-Since the lando environment does not have mod_shib, the `REMOTE_USER` environment variable is used to simulate SSO authentication. Set `REMOTE_USER` in `.env` to your NetID to simulate SSO authentication.
 
-Alternatively, set `CU_AUTH_IDENTIY_MANAGER=php-saml`, which will use the [OneLogin SAML PHP Toolkit](https://github.com/SAML-Toolkits/php-saml/tree/4.x-dev) and allow you to test SSO authentication locally.
+Recommended
+```
+CU_AUTH_IDENTIY_MANAGER=php-saml
+```
+This will allow you to test SSO authentication locally using the [OneLogin SAML PHP Toolkit](https://github.com/SAML-Toolkits/php-saml/tree/4.x-dev).
+
+Alternatively, you can skip authentication locally:
+```
+REMOTE_USER=your_netid_here
+```
