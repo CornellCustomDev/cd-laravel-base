@@ -41,6 +41,6 @@ class UserUpdate extends Component
         // Update the user with validated attributes
         $this->user->update($attributes);
 
-        return redirect()->route('admin.users.show', $this->user);
+        return redirect()->route('examples/users/show', $this->user);
     }
 }

@@ -15,11 +15,11 @@
         <div>{{ $user->email }}</div>
     </div>
 
-    <x-cds.button :href="route('admin.users.update', $user)">
+    <x-cds.button :href="route('examples/users/edit', $user)">
         Edit
     </x-cds.button>
 
-    <x-cds.button :href="route('admin.users')">
+    <x-cds.button :href="route('examples/table')">
         Back to Users
     </x-cds.button>
 </x-layouts.main-article>

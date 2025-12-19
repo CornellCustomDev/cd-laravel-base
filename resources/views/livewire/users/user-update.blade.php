@@ -2,8 +2,9 @@
     <h1>Edit User</h1>
     <h2>{{ $user->getOriginal('name') }}</h2>
 
+    <x-cds.callout-error heading="Please address these errors" />
+
     <form wire:submit.prevent="save">
-        <x-cds.callout-error heading="Please address these errors" />
 
         <x-cds.input
             label="Name"
@@ -21,7 +22,7 @@
         <x-cds.button type="submit">
             Save Changes
         </x-cds.button>
-        <x-cds.button :href="route('admin.users')">
+        <x-cds.button :href="route('examples/table')">
             Cancel
         </x-cds.button>
     </form>
