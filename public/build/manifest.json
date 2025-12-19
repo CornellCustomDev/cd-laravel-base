@@ -1,6 +1,6 @@
 {
   "resources/css/app.scss": {
-    "file": "assets/app-ppwW4VC5.css",
+    "file": "assets/app-tn0RQdqM.css",
     "src": "resources/css/app.scss",
     "isEntry": true,
     "name": "app",
@@ -9,7 +9,7 @@
     ]
   },
   "resources/css/flux-cds.css": {
-    "file": "assets/flux-cds-BcYKR7z0.css",
+    "file": "assets/flux-cds-Czp3teBB.css",
     "src": "resources/css/flux-cds.css",
     "isEntry": true,
     "name": "flux-cds",
