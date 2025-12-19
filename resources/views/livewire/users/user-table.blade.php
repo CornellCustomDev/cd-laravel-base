@@ -10,25 +10,37 @@
         <x-layouts.section class="region padded-small">
             <h2>Users Table</h2>
 
-            <flux:field class="mb-4">
-                <flux:label>Filter by name</flux:label>
-                <div class="flex items-center gap-2">
-                    <input
-                        type="text"
-                        placeholder="Search users..."
-                        class="flux-input w-full"
-                        x-on:input="$wire.set('nameFilter', $event.target.value)"
-                   />
-                    <button
-                        type="button"
-                        class="flux-button flux-button--ghost flux-button--sm"
-                        x-on:click="$wire.set('nameFilter', '')"
-                        @disabled($nameFilter === '')
-                   >
-                        Reset
-                    </button>
-                </div>
-            </flux:field>
+            <form wire:submit.prevent="filterByName">
+                <flux:field class="mb-4">
+                    <flux:label>Filter by name</flux:label>
+                    <div class="flex items-center gap-2">
+                        <flux:input
+                            type="text"
+                            placeholder="Search users..."
+                            class="w-full"
+                            wire:model.defer="nameFilter"
+                        />
+                        <flux:button
+                            type="submit"
+                            variant="primary"
+                            size="sm"
+                            class="ml-2"
+                        >
+                            Filter
+                        </flux:button>
+                        <flux:button
+                            type="button"
+                            variant="ghost"
+                            size="sm"
+                            class="ml-2"
+                            wire:click="resetFilter"
+                            :disabled="$nameFilter === ''"
+                        >
+                            Reset
+                        </flux:button>
+                    </div>
+                </flux:field>
+            </form>
 
             <flux:table class="cds-table" :paginate="$this->users" >
 

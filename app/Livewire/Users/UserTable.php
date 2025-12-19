@@ -35,10 +35,14 @@ class UserTable extends Component
         }
     }
 
-
-    // Livewire hook: runs after $nameFilter changes
-    public function updatedNameFilter(): void
+    public function filterByName()
     {
+        $this->resetPage();
+    }
+
+    public function resetFilter()
+    {
+        $this->nameFilter = '';
         $this->resetPage();
     }
 
