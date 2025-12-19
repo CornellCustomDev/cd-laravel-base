@@ -12,23 +12,23 @@
 
             <form wire:submit.prevent="filterByName">
                 <flux:field class="mb-4">
-                    <flux:label>Filter by name</flux:label>
                     <div class="flex items-center gap-2">
-                        <flux:input
+                        <x-cds.input
+                            label="Filter by name"
                             type="text"
                             placeholder="Search users..."
                             class="w-full"
                             wire:model.defer="nameFilter"
                         />
-                        <flux:button
+                        <x-cds.button
                             type="submit"
                             variant="primary"
                             size="sm"
                             class="ml-2"
                         >
                             Filter
-                        </flux:button>
-                        <flux:button
+                        </x-cds.button>
+                        <x-cds.button
                             type="button"
                             variant="ghost"
                             size="sm"
@@ -37,7 +37,7 @@
                             :disabled="$nameFilter === ''"
                         >
                             Reset
-                        </flux:button>
+                        </x-cds.button>
                     </div>
                 </flux:field>
             </form>
