@@ -25,13 +25,13 @@
                             <flux:table.cell class="whitespace-nowrap">{{ $user->email }}</flux:table.cell>
                             <flux:table.cell variant="strong">{{ $user->created_at }}</flux:table.cell>
                             <flux:table.cell>
-                                 <flux:dropdown position="bottom" align="end" offset="-15">
-                                <flux:button variant="ghost" size="sm" icon="ellipsis-horizontal" inset="top bottom"></flux:button>
-                                <flux:menu>
-                                    <flux:menu.item icon="pencil">Edit</flux:menu.item>
-                                    <flux:menu.item icon="trash" variant="danger">Delete</flux:menu.item>
-                                </flux:menu>
-                            </flux:dropdown>
+                                <flux:dropdown position="bottom" align="end" offset="-15">
+                                    <flux:button variant="ghost" size="sm" icon="ellipsis-horizontal" inset="top bottom"></flux:button>
+                                    <flux:navmenu>
+                                        <flux:navmenu.item href="{{ route('examples/users/edit', $user) }}" icon="pencil">Edit</flux:navmenu.item>
+                                        <flux:navmenu.item icon="trash" variant="danger">Delete</flux:navmenu.item>
+                                    </flux:navmenu>
+                                </flux:dropdown>
                             </flux:table.cell>
                         </flux:table.row>
                     @endforeach
