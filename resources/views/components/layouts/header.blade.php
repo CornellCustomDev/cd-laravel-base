@@ -22,12 +22,23 @@
 
     <div id="cu-header" class="cu-header">
 
-        <div class="navbar navbar-logo nav-right dark red fill">
+        <div id="utility-navigation" class="navbar navbar-logo nav-right dark red fill">
             <div class="container">
 {{--                <div class="logo">--}}
 {{--                    <a href="https://www.cornell.edu"><img src="{{ asset('cds/images/cornell/cornell_reduced_white_41.svg') }}" alt="Cornell University" width="183" height="41"></a>--}}
 {{--                </div>--}}
-                <!-- Utility Navigation.  Refer to cornellcustomdev.github.io/cds-docs/patterns/utility_navigation.md for details -->
+                <!-- Utility Navigation.  Refer to https://cornellcustomdev.github.io/cds-docs/landmarks/navigation.html#utility-navigation-wrapper for details -->
+                <ul>
+                    @if(auth()->check())
+                        <li class="top-level-li">
+                            <a href="{{ route('cu-auth.sso-logout') }}">Log Out</a>
+                        </li>
+                    @else
+                        <li class="top-level-li">
+                            <a href="{{ route('login') }}">Log In</a>
+                        </li>
+                    @endif
+                </ul>
             </div>
         </div>
 
