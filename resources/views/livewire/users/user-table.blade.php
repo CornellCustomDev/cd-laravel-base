@@ -10,6 +10,38 @@
         <x-layouts.section class="region padded-small">
             <h2>Users Table</h2>
 
+            <form wire:submit.prevent="filterByName">
+                <flux:field class="mb-4">
+                    <div class="flex items-center gap-2">
+                        <x-cds.input
+                            label="Filter by name"
+                            type="text"
+                            placeholder="Search users..."
+                            class="w-full"
+                            wire:model.defer="nameFilter"
+                        />
+                        <x-cds.button
+                            type="submit"
+                            variant="primary"
+                            size="sm"
+                            class="ml-2"
+                        >
+                            Filter
+                        </x-cds.button>
+                        <x-cds.button
+                            type="button"
+                            variant="ghost"
+                            size="sm"
+                            class="ml-2"
+                            wire:click="resetFilter"
+                            :disabled="$nameFilter === ''"
+                        >
+                            Reset
+                        </x-cds.button>
+                    </div>
+                </flux:field>
+            </form>
+
             <flux:table class="cds-table" :paginate="$this->users" >
 
                 <flux:table.columns>
