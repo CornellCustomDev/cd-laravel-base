@@ -161,9 +161,13 @@
         @apply bg-cds-blue hover:bg-[#0077b3] focus:bg-[#0077b3];
     }
 
-    &[type="reset"] {
-        @apply text-black;
+    &[type="reset"],
+    &a[data-flux-group-target] {
+        @apply text-black no-underline;
         @apply bg-cds-light-gray hover:bg-[#d1d1d1] focus:bg-[#d1d1d1];
+    }
+    &a[data-flux-group-target] {
+        @apply relative top-[-2px];
     }
 }
 
@@ -210,11 +214,11 @@
             @apply mr-0 mb-0;
             @apply relative top-1;
         }
-        [data-flux-menu-item] {
+        [data-flux-navmenu-item] {
             @apply cursor-pointer;
             @apply font-sans text-sm;
+            @apply no-underline;
             @apply bg-transparent border-none;
-            @apply hover:text-cds-warning-red;
         }
     }
 }
