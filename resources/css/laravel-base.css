@@ -38,6 +38,11 @@
     @apply focus:default-focus-ring focus:shadow-none;
 }
 
+/* Forms  */
+form .flex {
+    @apply ml-0 mr-0;
+}
+
 /* Form fields */
 [data-flux-field] {
     @apply max-w-[600px];
