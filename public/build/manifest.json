@@ -1,20 +1,20 @@
 {
-  "resources/css/app.scss": {
+  "resources/css/app.css": {
     "file": "assets/app-tn0RQdqM.css",
-    "src": "resources/css/app.scss",
+    "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
     "names": [
       "app.css"
     ]
   },
-  "resources/css/flux-cds.css": {
-    "file": "assets/flux-cds-sNMm7Kex.css",
-    "src": "resources/css/flux-cds.css",
+  "resources/css/laravel-base.css": {
+    "file": "assets/laravel-base-DIIurzBm.css",
+    "src": "resources/css/laravel-base.css",
     "isEntry": true,
-    "name": "flux-cds",
+    "name": "laravel-base",
     "names": [
-      "flux-cds.css"
+      "laravel-base.css"
     ]
   },
   "resources/js/app.js": {

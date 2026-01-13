@@ -38,6 +38,11 @@
     @apply focus:default-focus-ring focus:shadow-none;
 }
 
+/* Forms */
+form .flex {
+    @apply mx-0;
+}
+
 /* Form fields */
 [data-flux-field] {
     @apply max-w-[600px];
@@ -155,14 +160,16 @@
     @apply text-base font-normal;
     @apply px-5 py-1;
     @apply mr-1 mb-2;
+    @apply align-middle;
 
     &[type="submit"] {
         @apply text-white;
         @apply bg-cds-blue hover:bg-[#0077b3] focus:bg-[#0077b3];
     }
 
-    &[type="reset"] {
-        @apply text-black;
+    &[type="reset"],
+    &a[data-flux-group-target] {
+        @apply text-black no-underline;
         @apply bg-cds-light-gray hover:bg-[#d1d1d1] focus:bg-[#d1d1d1];
     }
 }
@@ -210,11 +217,11 @@
             @apply mr-0 mb-0;
             @apply relative top-1;
         }
-        [data-flux-menu-item] {
+        [data-flux-navmenu-item] {
             @apply cursor-pointer;
             @apply font-sans text-sm;
+            @apply no-underline;
             @apply bg-transparent border-none;
-            @apply hover:text-cds-warning-red;
         }
     }
 }
