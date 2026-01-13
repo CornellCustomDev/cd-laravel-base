@@ -160,6 +160,7 @@ form .flex {
     @apply text-base font-normal;
     @apply px-5 py-1;
     @apply mr-1 mb-2;
+    @apply align-middle;
 
     &[type="submit"] {
         @apply text-white;
@@ -170,9 +171,6 @@ form .flex {
     &a[data-flux-group-target] {
         @apply text-black no-underline;
         @apply bg-cds-light-gray hover:bg-[#d1d1d1] focus:bg-[#d1d1d1];
-    }
-    &a[data-flux-group-target] {
-        @apply relative top-[-2px];
     }
 }
 
