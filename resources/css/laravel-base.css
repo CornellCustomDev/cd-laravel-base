@@ -38,9 +38,9 @@
     @apply focus:default-focus-ring focus:shadow-none;
 }
 
-/* Forms  */
+/* Forms */
 form .flex {
-    @apply ml-0 mr-0;
+    @apply mx-0;
 }
 
 /* Form fields */
