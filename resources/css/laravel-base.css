@@ -23,6 +23,7 @@
         "Noto Color Emoji";
 
     /* Colors */
+    --color-cds-red: #b31b1b;
     --color-cds-blue: #006699;
     --color-cds-light-gray: #dbdbdb;
     --color-cds-dark-silver: #707070;
@@ -36,6 +37,11 @@
 
 @utility focus-ring {
     @apply focus:default-focus-ring focus:shadow-none;
+}
+
+/* Active Nav Link */
+.nav-link.is-active {
+    @apply bg-cds-red;
 }
 
 /* Forms */

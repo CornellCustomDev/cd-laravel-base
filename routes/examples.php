@@ -26,4 +26,7 @@ Route::group(['middleware' => [CUAuth::class]], function () {
     Route::get('/examples/users/{user}/edit', UserEdit::class)->name('examples/users/edit');
     Route::get('/examples/users/{user}', UserShow::class)->name('examples/users/show');
 
+    Route::view('/active/active-nav-link', 'active.active-nav-link')
+    ->name('active.active-nav-link');
+
 });
