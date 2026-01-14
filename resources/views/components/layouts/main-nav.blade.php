@@ -4,23 +4,23 @@
         <button id="mobile-close"><span class="sr-only">Close menu</span></button>
         <ul>
             <li>
-                <x-layouts.nav-link href="/">
+                <x-cds.nav-link href="/">
                     Template
-                </x-layouts.nav-link>
+                </x-cds.nav-link>
             </li>
         </ul>
         <ul>
             <li>
-                <x-layouts.nav-link href="active.active-nav-link-raw">
+                <x-cds.nav-link href="active.active-nav-link-raw">
                     Active Link - RAW URL
-                </x-layouts.nav-link>
+                </x-cds.nav-link>
             </li>
         </ul>
         <ul>
             <li>
-                <x-layouts.nav-link href="{{ route('active.active-nav-link-route') }}">
+                <x-cds.nav-link href="{{ route('active.active-nav-link-route') }}">
                     Active Link - Route
-                </x-layouts.nav-link>
+                </x-cds.nav-link>
             </li>
         </ul>
         <ul>
