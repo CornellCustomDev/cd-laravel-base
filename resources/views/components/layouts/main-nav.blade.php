@@ -11,8 +11,15 @@
         </ul>
         <ul>
             <li>
-                <x-layouts.nav-link href="active.active-nav-link">
+                <x-layouts.nav-link href="active.active-nav-link-raw">
                     Active Link - RAW URL
+                </x-layouts.nav-link>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <x-layouts.nav-link href="{{ route('active.active-nav-link-route') }}">
+                    Active Link - Route
                 </x-layouts.nav-link>
             </li>
         </ul>
@@ -21,9 +28,7 @@
                 <a role="combobox" aria-expanded="false" data-aria-controls="dropdown-examples" aria-controls="dropdown-examples" tabindex="0">Examples</a>
                 <ul id="dropdown-examples" role="listbox">
                     <li>
-                        <x-layouts.nav-link href="{{ route('examples/cds') }}">
-                            Cornell Design System
-                        </x-layouts.nav-link>
+                        <a href="{{ route('examples/cds') }}">Cornell Design System</a>
                     </li>
                     <li>
                         <a href="{{ route('examples/form') }}">Forms</a>
