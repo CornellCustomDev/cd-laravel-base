@@ -39,11 +39,6 @@
     @apply focus:default-focus-ring focus:shadow-none;
 }
 
-/* Active Nav Link */
-.nav-link.is-active {
-    @apply bg-cds-red;
-}
-
 /* Forms */
 form .flex {
     @apply mx-0;
