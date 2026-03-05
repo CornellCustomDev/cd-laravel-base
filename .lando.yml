@@ -5,3 +5,18 @@ config:
   php: 8.3
   cache: none
   composer_version: 2-latest
+
+services:
+  appserver:
+    run:
+      - composer setup
+  node:
+    type: node:24
+    build:
+      - npm install
+    run:
+      - npm run build
+
+tooling:
+  npm:
+    service: node

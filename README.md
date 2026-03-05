@@ -2,11 +2,23 @@
 
 ## Setup
 
-Run `composer setup` after cloning to set up your environment.
+```bash
+git clone git@github.com:CornellCustomDev/cd-laravel-base.git
+cd cd-laravel-base
+cp auth.example.json auth.json
+```
 
-FluxPro components will not be accessible until you provide Flux repo credentials in auth.json.
+> Edit auth.json and add the credentials
 
-_Note: If you run composer setup inside the lando container you will need to provide a GitHub Token to access the private https://github.com/CornellCustomDev/cds repository._
+FluxPro components will not be accessible until you provide Flux repo credentials in auth.json (contact Nick).
+
+A GitHub Token for github-oauth will be required to access the private https://github.com/CornellCustomDev/cds repository.
+
+Once these are in place you can run:
+
+```bash
+lando start
+```
 
 ### Local authentication setup
 
@@ -16,12 +28,9 @@ REMOTE_USER=your_netid_here
 ```
 This skips SSO authentication, see [below](#sso-authentication) for more details on SSO setup.
 
-## Run npm
-Run the following commands for local environment:
+## Running npm
 
-    npm install
-    npm run build
-    lando artisan optimize
+    lando npm run build
 
 ## Recreate database with User table data:
 
