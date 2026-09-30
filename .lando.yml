@@ -2,7 +2,8 @@ name: cd-laravel-base
 recipe: laravel
 config:
   webroot: ./public
-  php: 8.3
+  php: 8.5
+  database: mysql:8.4
   cache: none
   composer_version: 2-latest
 
