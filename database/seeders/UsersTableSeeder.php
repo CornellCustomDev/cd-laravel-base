@@ -2,11 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use App\Models\User;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Database\Seeder;
 
 class UsersTableSeeder extends Seeder
 {
@@ -15,7 +12,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run(): void
     {
-       // use factories for generating multiple records
+        // use factories for generating multiple records
         User::factory()->count(50)->create();
     }
 }

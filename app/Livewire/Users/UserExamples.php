@@ -2,16 +2,18 @@
 
 namespace App\Livewire\Users;
 
-use Livewire\Component;
 use App\Models\User;
 use Livewire\Attributes\Title;
+use Livewire\Component;
 
-#[Title("CD Laravel Base - User Examples")]
+#[Title('CD Laravel Base - User Examples')]
 
 class UserExamples extends Component
 {
     public $users;
+
     public $userId = null;
+
     public $selectedUser = null;
 
     public function mount()
@@ -21,7 +23,7 @@ class UserExamples extends Component
 
     public function updatedUserId($userId)
     {
-        if (is_null($userId) || !($user = User::find($userId))) {
+        if (is_null($userId) || ! ($user = User::find($userId))) {
             $this->selectedUser = null;
         } else {
             $this->selectedUser = $user;

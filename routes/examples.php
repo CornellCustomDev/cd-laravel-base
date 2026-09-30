@@ -1,9 +1,9 @@
 <?php
 
+use App\Livewire\Users\UserEdit;
 use App\Livewire\Users\UserExamples;
 use App\Livewire\Users\UserShow;
 use App\Livewire\Users\UserTable;
-use App\Livewire\Users\UserEdit;
 use CornellCustomDev\LaravelStarterKit\CUAuth\Middleware\CUAuth;
 
 Route::group(['middleware' => [CUAuth::class]], function () {

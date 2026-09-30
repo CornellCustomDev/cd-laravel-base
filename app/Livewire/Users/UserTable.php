@@ -2,21 +2,22 @@
 
 namespace App\Livewire\Users;
 
-use Livewire\Component;
 use App\Models\User;
-use Livewire\WithPagination;
-use Livewire\Attributes\Title;
 use Livewire\Attributes\Computed;
+use Livewire\Attributes\Title;
+use Livewire\Component;
+use Livewire\WithPagination;
 
-#[Title("CD Laravel Base - User Table Example")]
-
+#[Title('CD Laravel Base - User Table Example')]
 
 class UserTable extends Component
 {
     use WithPagination;
 
     public $sortBy = 'name';
+
     public $sortDirection = 'asc';
+
     public $nameFilter = '';
 
     public function render()
@@ -25,7 +26,8 @@ class UserTable extends Component
         return view('livewire.users.user-table');
     }
 
-    public function sort($column) {
+    public function sort($column)
+    {
 
         if ($this->sortBy === $column) {
             $this->sortDirection = $this->sortDirection === 'asc' ? 'desc' : 'asc';
@@ -51,11 +53,9 @@ class UserTable extends Component
     {
         return User::query()
             ->when($this->nameFilter !== '', function ($query) {
-                $query->where('name', 'like', '%' . $this->nameFilter . '%');
+                $query->where('name', 'like', '%'.$this->nameFilter.'%');
             })
             ->orderBy($this->sortBy, $this->sortDirection)
             ->paginate(5);
     }
-
-    
 }
