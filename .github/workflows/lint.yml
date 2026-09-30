@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: Testing
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -37,7 +37,7 @@ jobs:
           npm install
 
       - name: Run Pint
-        run: vendor/bin/pint
+        run: vendor/bin/pint --test
 
       # - name: Commit Changes
       #   uses: stefanzweifel/git-auto-commit-action@v5
